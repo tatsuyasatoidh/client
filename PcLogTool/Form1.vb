@@ -504,7 +504,7 @@ Public Class Form1
         'FtpWebRequestの作成
         Dim ftpReq As System.Net.FtpWebRequest = CType(System.Net.WebRequest.Create(u), System.Net.FtpWebRequest)
         'ログインユーザー名とパスワードを設定
-        ftpReq.Credentials = New System.Net.NetworkCredential("pclog.webcrow.jp", "cosmic")
+        ftpReq.Credentials = New System.Net.NetworkCredential("pclog.webcrow.jp", "****")
         'MethodにWebRequestMethods.Ftp.UploadFile("STOR")を設定
         ftpReq.Method = System.Net.WebRequestMethods.Ftp.UploadFile
         '要求の完了後に接続を閉じる
