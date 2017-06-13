@@ -75,13 +75,13 @@ Public Class Form1
         ' 1.接続文字列を作成する
         Dim Builder = New MySqlConnectionStringBuilder()
         ' データベースに接続するために必要な情報をBuilderに与える
-        Builder.Server = "localhost"
+        Builder.Server = "pclog.c5q2rhfkfpib.us-west-2.rds.amazonaws.com"
         Builder.Port = 3306
+        Builder.Password = "idhpclogtool"
         Builder.UserID = "root"
         Builder.Database = "pclog"
         Dim ConStr = Builder.ToString()
-
-
+            
         Return ConStr
 
     End Function
