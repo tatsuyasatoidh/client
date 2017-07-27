@@ -1,0 +1,3214 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ServerMigrationService</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig">
+            <summary>
+            Configuration for accessing Amazon ServerMigrationService service
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.AmazonServerMigrationServiceException">
+            <summary>
+             Common exception for the ServerMigrationService service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonServerMigrationServiceException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonServerMigrationServiceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonServerMigrationServiceException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonServerMigrationServiceException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonServerMigrationServiceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the AmazonServerMigrationServiceException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ConnectorCapability">
+            <summary>
+            Constants used for properties of type ConnectorCapability.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ConnectorCapability.VSPHERE">
+            <summary>
+            Constant VSPHERE for ConnectorCapability
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorCapability.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorCapability.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorCapability.op_Implicit(System.String)~Amazon.ServerMigrationService.ConnectorCapability">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ConnectorStatus">
+            <summary>
+            Constants used for properties of type ConnectorStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ConnectorStatus.HEALTHY">
+            <summary>
+            Constant HEALTHY for ConnectorStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ConnectorStatus.UNHEALTHY">
+            <summary>
+            Constant UNHEALTHY for ConnectorStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ConnectorStatus.op_Implicit(System.String)~Amazon.ServerMigrationService.ConnectorStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.LicenseType">
+            <summary>
+            Constants used for properties of type LicenseType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.LicenseType.AWS">
+            <summary>
+            Constant AWS for LicenseType
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.LicenseType.BYOL">
+            <summary>
+            Constant BYOL for LicenseType
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.LicenseType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.LicenseType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.LicenseType.op_Implicit(System.String)~Amazon.ServerMigrationService.LicenseType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ReplicationJobState">
+            <summary>
+            Constants used for properties of type ReplicationJobState.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationJobState.ACTIVE">
+            <summary>
+            Constant ACTIVE for ReplicationJobState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationJobState.DELETED">
+            <summary>
+            Constant DELETED for ReplicationJobState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationJobState.DELETING">
+            <summary>
+            Constant DELETING for ReplicationJobState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationJobState.FAILED">
+            <summary>
+            Constant FAILED for ReplicationJobState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationJobState.PENDING">
+            <summary>
+            Constant PENDING for ReplicationJobState
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationJobState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationJobState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationJobState.op_Implicit(System.String)~Amazon.ServerMigrationService.ReplicationJobState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ReplicationRunState">
+            <summary>
+            Constants used for properties of type ReplicationRunState.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.ACTIVE">
+            <summary>
+            Constant ACTIVE for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.COMPLETED">
+            <summary>
+            Constant COMPLETED for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.DELETED">
+            <summary>
+            Constant DELETED for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.DELETING">
+            <summary>
+            Constant DELETING for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.FAILED">
+            <summary>
+            Constant FAILED for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.MISSED">
+            <summary>
+            Constant MISSED for ReplicationRunState
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunState.PENDING">
+            <summary>
+            Constant PENDING for ReplicationRunState
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunState.op_Implicit(System.String)~Amazon.ServerMigrationService.ReplicationRunState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ReplicationRunType">
+            <summary>
+            Constants used for properties of type ReplicationRunType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunType.AUTOMATIC">
+            <summary>
+            Constant AUTOMATIC for ReplicationRunType
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ReplicationRunType.ON_DEMAND">
+            <summary>
+            Constant ON_DEMAND for ReplicationRunType
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ReplicationRunType.op_Implicit(System.String)~Amazon.ServerMigrationService.ReplicationRunType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ServerCatalogStatus">
+            <summary>
+            Constants used for properties of type ServerCatalogStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerCatalogStatus.AVAILABLE">
+            <summary>
+            Constant AVAILABLE for ServerCatalogStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerCatalogStatus.DELETED">
+            <summary>
+            Constant DELETED for ServerCatalogStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerCatalogStatus.EXPIRED">
+            <summary>
+            Constant EXPIRED for ServerCatalogStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerCatalogStatus.IMPORTING">
+            <summary>
+            Constant IMPORTING for ServerCatalogStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerCatalogStatus.NOT_IMPORTED">
+            <summary>
+            Constant NOT_IMPORTED for ServerCatalogStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerCatalogStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerCatalogStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerCatalogStatus.op_Implicit(System.String)~Amazon.ServerMigrationService.ServerCatalogStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.ServerType">
+            <summary>
+            Constants used for properties of type ServerType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.ServerType.VIRTUAL_MACHINE">
+            <summary>
+            Constant VIRTUAL_MACHINE for ServerType
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.ServerType.op_Implicit(System.String)~Amazon.ServerMigrationService.ServerType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.VmManagerType">
+            <summary>
+            Constants used for properties of type VmManagerType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ServerMigrationService.VmManagerType.VSPHERE">
+            <summary>
+            Constant VSPHERE for VmManagerType
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.VmManagerType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.VmManagerType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.VmManagerType.op_Implicit(System.String)~Amazon.ServerMigrationService.VmManagerType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.AmazonServerMigrationServiceRequest">
+            <summary>
+            Base class for ServerMigrationService operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Connector">
+            <summary>
+            Object representing a Connector
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.AssociatedOn">
+            <summary>
+            Gets and sets the property AssociatedOn.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.CapabilityList">
+            <summary>
+            Gets and sets the property CapabilityList.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.ConnectorId">
+            <summary>
+            Gets and sets the property ConnectorId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.IpAddress">
+            <summary>
+            Gets and sets the property IpAddress.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.MacAddress">
+            <summary>
+            Gets and sets the property MacAddress.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.Status">
+            <summary>
+            Gets and sets the property Status.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.Version">
+            <summary>
+            Gets and sets the property Version.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.VmManagerId">
+            <summary>
+            Gets and sets the property VmManagerId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.VmManagerName">
+            <summary>
+            Gets and sets the property VmManagerName.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Connector.VmManagerType">
+            <summary>
+            Gets and sets the property VmManagerType.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest">
+            <summary>
+            Container for the parameters to the CreateReplicationJob operation.
+            The CreateReplicationJob API is used to create a ReplicationJob to replicate a server
+            on AWS. Call this API to first create a ReplicationJob, which will then schedule periodic
+            ReplicationRuns to replicate your server to AWS. Each ReplicationRun will result in
+            the creation of an AWS AMI.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.Description">
+            <summary>
+            Gets and sets the property Description.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.Frequency">
+            <summary>
+            Gets and sets the property Frequency.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.LicenseType">
+            <summary>
+            Gets and sets the property LicenseType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.RoleName">
+            <summary>
+            Gets and sets the property RoleName.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.SeedReplicationTime">
+            <summary>
+            Gets and sets the property SeedReplicationTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobRequest.ServerId">
+            <summary>
+            Gets and sets the property ServerId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.CreateReplicationJobResponse">
+            <summary>
+            This is the response object from the CreateReplicationJob operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.CreateReplicationJobResponse.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest">
+            <summary>
+            Container for the parameters to the DeleteReplicationJob operation.
+            The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further
+            ReplicationRuns. This will delete the contents of the S3 bucket used to store SMS
+            artifacts, but will not delete any AMIs created by the SMS service.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DeleteReplicationJobResponse">
+            <summary>
+            This is the response object from the DeleteReplicationJob operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest">
+            <summary>
+            Container for the parameters to the DeleteServerCatalog operation.
+            The DeleteServerCatalog API clears all servers from your server catalog. This means
+            that these servers will no longer be accessible to the Server Migration Service.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DeleteServerCatalogResponse">
+            <summary>
+            This is the response object from the DeleteServerCatalog operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DisassociateConnectorRequest">
+            <summary>
+            Container for the parameters to the DisassociateConnector operation.
+            The DisassociateConnector API will disassociate a connector from the Server Migration
+            Service, rendering it unavailable to support replication jobs.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.DisassociateConnectorRequest.ConnectorId">
+            <summary>
+            Gets and sets the property ConnectorId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.DisassociateConnectorResponse">
+            <summary>
+            This is the response object from the DisassociateConnector operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetConnectorsRequest">
+            <summary>
+            Container for the parameters to the GetConnectors operation.
+            The GetConnectors API returns a list of connectors that are registered with the Server
+            Migration Service.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetConnectorsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetConnectorsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetConnectorsResponse">
+            <summary>
+            This is the response object from the GetConnectors operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetConnectorsResponse.ConnectorList">
+            <summary>
+            Gets and sets the property ConnectorList.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetConnectorsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetReplicationJobsRequest">
+            <summary>
+            Container for the parameters to the GetReplicationJobs operation.
+            The GetReplicationJobs API will return all of your ReplicationJobs and their details.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationJobs.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationJobsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationJobsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationJobsRequest.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetReplicationJobsResponse">
+            <summary>
+            This is the response object from the GetReplicationJobs operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationJobsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationJobsResponse.ReplicationJobList">
+            <summary>
+            Gets and sets the property ReplicationJobList.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetReplicationRunsRequest">
+            <summary>
+            Container for the parameters to the GetReplicationRuns operation.
+            The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationRuns for a ReplicationJob.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsRequest.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetReplicationRunsResponse">
+            <summary>
+            This is the response object from the GetReplicationRuns operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsResponse.ReplicationJob">
+            <summary>
+            Gets and sets the property ReplicationJob.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetReplicationRunsResponse.ReplicationRunList">
+            <summary>
+            Gets and sets the property ReplicationRunList.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetServersRequest">
+            <summary>
+            Container for the parameters to the GetServers operation.
+            The GetServers API returns a list of all servers in your server catalog. For this
+            call to succeed, you must previously have called ImportServerCatalog.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.GetServersResponse">
+            <summary>
+            This is the response object from the GetServers operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersResponse.LastModifiedOn">
+            <summary>
+            Gets and sets the property LastModifiedOn.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersResponse.ServerCatalogStatus">
+            <summary>
+            Gets and sets the property ServerCatalogStatus.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.GetServersResponse.ServerList">
+            <summary>
+            Gets and sets the property ServerList.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ImportServerCatalogRequest">
+            <summary>
+            Container for the parameters to the ImportServerCatalog operation.
+            The ImportServerCatalog API is used to gather the complete list of on-premises servers
+            on your premises. This API call requires connectors to be installed and monitoring
+            all servers you would like imported. This API call returns immediately, but may take
+            some time to retrieve all of the servers.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ImportServerCatalogResponse">
+            <summary>
+            This is the response object from the ImportServerCatalog operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.InternalErrorException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalErrorException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InternalErrorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InternalErrorException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidParameterException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.InvalidParameterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InvalidParameterException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.String)">
+            <summary>
+            Constructs a new MissingRequiredParameterException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of MissingRequiredParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of MissingRequiredParameterException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of MissingRequiredParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of MissingRequiredParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.MissingRequiredParameterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the MissingRequiredParameterException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new NoConnectorsAvailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of NoConnectorsAvailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of NoConnectorsAvailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of NoConnectorsAvailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of NoConnectorsAvailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the NoConnectorsAvailableException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.String)">
+            <summary>
+            Constructs a new OperationNotPermittedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of OperationNotPermittedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of OperationNotPermittedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OperationNotPermittedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OperationNotPermittedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.OperationNotPermittedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the OperationNotPermittedException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ReplicationJob">
+            <summary>
+            Object representing a Replication Job
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.Description">
+            <summary>
+            Gets and sets the property Description.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.Frequency">
+            <summary>
+            Gets and sets the property Frequency.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.LatestAmiId">
+            <summary>
+            Gets and sets the property LatestAmiId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.LicenseType">
+            <summary>
+            Gets and sets the property LicenseType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.NextReplicationRunStartTime">
+            <summary>
+            Gets and sets the property NextReplicationRunStartTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.ReplicationRunList">
+            <summary>
+            Gets and sets the property ReplicationRunList.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.RoleName">
+            <summary>
+            Gets and sets the property RoleName.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.SeedReplicationTime">
+            <summary>
+            Gets and sets the property SeedReplicationTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.ServerId">
+            <summary>
+            Gets and sets the property ServerId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.ServerType">
+            <summary>
+            Gets and sets the property ServerType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.State">
+            <summary>
+            Gets and sets the property State.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationJob.VmServer">
+            <summary>
+            Gets and sets the property VmServer.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.String)">
+            <summary>
+            Constructs a new ReplicationJobAlreadyExistsException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ReplicationJobAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ReplicationJobAlreadyExistsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationJobAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationJobAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ReplicationJobAlreadyExistsException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ReplicationJobNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ReplicationJobNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ReplicationJobNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationJobNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationJobNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ReplicationJobNotFoundException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ReplicationRun">
+            <summary>
+            Object representing a Replication Run
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.AmiId">
+            <summary>
+            Gets and sets the property AmiId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.CompletedTime">
+            <summary>
+            Gets and sets the property CompletedTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.Description">
+            <summary>
+            Gets and sets the property Description.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.ReplicationRunId">
+            <summary>
+            Gets and sets the property ReplicationRunId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.ScheduledStartTime">
+            <summary>
+            Gets and sets the property ScheduledStartTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.State">
+            <summary>
+            Gets and sets the property State.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.ReplicationRun.Type">
+            <summary>
+            Gets and sets the property Type.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ReplicationRunLimitExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ReplicationRunLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ReplicationRunLimitExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationRunLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ReplicationRunLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ReplicationRunLimitExceededException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Server">
+            <summary>
+            Object representing a server
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Server.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Server.ReplicationJobTerminated">
+            <summary>
+            Gets and sets the property ReplicationJobTerminated.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Server.ServerId">
+            <summary>
+            Gets and sets the property ServerId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Server.ServerType">
+            <summary>
+            Gets and sets the property ServerType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Server.VmServer">
+            <summary>
+            Gets and sets the property VmServer.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServerCannotBeReplicatedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServerCannotBeReplicatedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServerCannotBeReplicatedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServerCannotBeReplicatedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServerCannotBeReplicatedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ServerCannotBeReplicatedException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest">
+            <summary>
+            Container for the parameters to the StartOnDemandReplicationRun operation.
+            The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in
+            addition to those that are scheduled based on your frequency). This ReplicationRun
+            will start immediately. StartOnDemandReplicationRun is subject to limits on how many
+            on demand ReplicationRuns you may call per 24-hour period.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest.Description">
+            <summary>
+            Gets and sets the property Description.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunResponse">
+            <summary>
+            This is the response object from the StartOnDemandReplicationRun operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunResponse.ReplicationRunId">
+            <summary>
+            Gets and sets the property ReplicationRunId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            <summary>
+             ServerMigrationService exception
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnauthorizedOperationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedOperationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.UnauthorizedOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the UnauthorizedOperationException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest">
+            <summary>
+            Container for the parameters to the UpdateReplicationJob operation.
+            The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob
+            created using CreateReplicationJob. Calling this API will affect the next scheduled
+            ReplicationRun.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.Description">
+            <summary>
+            Gets and sets the property Description.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.Frequency">
+            <summary>
+            Gets and sets the property Frequency.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.LicenseType">
+            <summary>
+            Gets and sets the property LicenseType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.NextReplicationRunStartTime">
+            <summary>
+            Gets and sets the property NextReplicationRunStartTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.ReplicationJobId">
+            <summary>
+            Gets and sets the property ReplicationJobId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest.RoleName">
+            <summary>
+            Gets and sets the property RoleName.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.UpdateReplicationJobResponse">
+            <summary>
+            This is the response object from the UpdateReplicationJob operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.VmServer">
+            <summary>
+            Object representing a VM server
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServer.VmManagerName">
+            <summary>
+            Gets and sets the property VmManagerName.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServer.VmManagerType">
+            <summary>
+            Gets and sets the property VmManagerType.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServer.VmName">
+            <summary>
+            Gets and sets the property VmName.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServer.VmPath">
+            <summary>
+            Gets and sets the property VmPath.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServer.VmServerAddress">
+            <summary>
+            Gets and sets the property VmServerAddress.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.VmServerAddress">
+            <summary>
+            Object representing a server's location
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServerAddress.VmId">
+            <summary>
+            Gets and sets the property VmId.
+            </summary>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.VmServerAddress.VmManagerId">
+            <summary>
+            Gets and sets the property VmManagerId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ConnectorUnmarshaller">
+            <summary>
+            Response Unmarshaller for Connector Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ConnectorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#Connector,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ConnectorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ConnectorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobRequestMarshaller">
+            <summary>
+            CreateReplicationJob Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.CreateReplicationJobRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateReplicationJob operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.CreateReplicationJobResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobRequestMarshaller">
+            <summary>
+            DeleteReplicationJob Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteReplicationJob operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteReplicationJobResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogRequestMarshaller">
+            <summary>
+            DeleteServerCatalog Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteServerCatalog operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DeleteServerCatalogResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorRequestMarshaller">
+            <summary>
+            DisassociateConnector Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.DisassociateConnectorRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DisassociateConnector operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.DisassociateConnectorResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsRequestMarshaller">
+            <summary>
+            GetConnectors Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.GetConnectorsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetConnectors operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetConnectorsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsRequestMarshaller">
+            <summary>
+            GetReplicationJobs Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.GetReplicationJobsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetReplicationJobs operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationJobsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsRequestMarshaller">
+            <summary>
+            GetReplicationRuns Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.GetReplicationRunsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetReplicationRuns operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetReplicationRunsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersRequestMarshaller">
+            <summary>
+            GetServers Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.GetServersRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetServers operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.GetServersResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogRequestMarshaller">
+            <summary>
+            ImportServerCatalog Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.ImportServerCatalogRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ImportServerCatalog operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ImportServerCatalogResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationJobUnmarshaller">
+            <summary>
+            Response Unmarshaller for ReplicationJob Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationJobUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#ReplicationJob,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationJobUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationJobUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationRunUnmarshaller">
+            <summary>
+            Response Unmarshaller for ReplicationRun Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationRunUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#ReplicationRun,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationRunUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ReplicationRunUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ServerUnmarshaller">
+            <summary>
+            Response Unmarshaller for Server Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ServerUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#Server,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ServerUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.ServerUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunRequestMarshaller">
+            <summary>
+            StartOnDemandReplicationRun Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StartOnDemandReplicationRun operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.StartOnDemandReplicationRunResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobRequestMarshaller">
+            <summary>
+            UpdateReplicationJob Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobRequestMarshaller.Marshall(Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateReplicationJob operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.UpdateReplicationJobResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerAddressUnmarshaller">
+            <summary>
+            Response Unmarshaller for VmServerAddress Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerAddressUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#VmServerAddress,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerAddressUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerAddressUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerUnmarshaller">
+            <summary>
+            Response Unmarshaller for VmServer Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ServerMigrationService#Model#VmServer,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ServerMigrationService.Model.Internal.MarshallTransformations.VmServerUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient">
+             <summary>
+             Implementation for accessing ServerMigrationService
+            
+             Amazon Server Migration Service automates the process of migrating servers to EC2.
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor">
+             <summary>
+             Constructs AmazonServerMigrationServiceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonServerMigrationServiceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig)">
+             <summary>
+             Constructs AmazonServerMigrationServiceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonServerMigrationServiceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Credentials and an
+            AmazonServerMigrationServiceClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonServerMigrationServiceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String,Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonServerMigrationServiceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonServerMigrationServiceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.#ctor(System.String,System.String,System.String,Amazon.ServerMigrationService.AmazonServerMigrationServiceConfig)">
+            <summary>
+            Constructs AmazonServerMigrationServiceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonServerMigrationServiceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonServerMigrationServiceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.CreateReplicationJob(Amazon.ServerMigrationService.Model.CreateReplicationJobRequest)">
+            <summary>
+            The CreateReplicationJob API is used to create a ReplicationJob to replicate a server
+            on AWS. Call this API to first create a ReplicationJob, which will then schedule periodic
+            ReplicationRuns to replicate your server to AWS. Each ReplicationRun will result in
+            the creation of an AWS AMI.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateReplicationJob service method.</param>
+            
+            <returns>The response from the CreateReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InternalErrorException">
+            An internal error has occured.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException">
+            No connectors are available to handle this request. Please associate connector(s)
+            and verify any existing connectors are healthy and can respond to requests.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException">
+            An active Replication Job already exists for the specified server.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException">
+            The provided server cannot be replicated.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.CreateReplicationJobAsync(Amazon.ServerMigrationService.Model.CreateReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DeleteReplicationJob(Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest)">
+            <summary>
+            The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further
+            ReplicationRuns. This will delete the contents of the S3 bucket used to store SMS
+            artifacts, but will not delete any AMIs created by the SMS service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteReplicationJob service method.</param>
+            
+            <returns>The response from the DeleteReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException">
+            The specified Replication Job cannot be found.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DeleteReplicationJobAsync(Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DeleteServerCatalog(Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest)">
+            <summary>
+            The DeleteServerCatalog API clears all servers from your server catalog. This means
+            that these servers will no longer be accessible to the Server Migration Service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteServerCatalog service method.</param>
+            
+            <returns>The response from the DeleteServerCatalog service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DeleteServerCatalogAsync(Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteServerCatalog operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteServerCatalog operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DisassociateConnector(Amazon.ServerMigrationService.Model.DisassociateConnectorRequest)">
+            <summary>
+            The DisassociateConnector API will disassociate a connector from the Server Migration
+            Service, rendering it unavailable to support replication jobs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DisassociateConnector service method.</param>
+            
+            <returns>The response from the DisassociateConnector service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.DisassociateConnectorAsync(Amazon.ServerMigrationService.Model.DisassociateConnectorRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DisassociateConnector operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DisassociateConnector operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetConnectors(Amazon.ServerMigrationService.Model.GetConnectorsRequest)">
+            <summary>
+            The GetConnectors API returns a list of connectors that are registered with the Server
+            Migration Service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetConnectors service method.</param>
+            
+            <returns>The response from the GetConnectors service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetConnectorsAsync(Amazon.ServerMigrationService.Model.GetConnectorsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetConnectors operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetConnectors operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetReplicationJobs(Amazon.ServerMigrationService.Model.GetReplicationJobsRequest)">
+            <summary>
+            The GetReplicationJobs API will return all of your ReplicationJobs and their details.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationJobs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetReplicationJobs service method.</param>
+            
+            <returns>The response from the GetReplicationJobs service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetReplicationJobsAsync(Amazon.ServerMigrationService.Model.GetReplicationJobsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetReplicationJobs operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetReplicationJobs operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetReplicationRuns(Amazon.ServerMigrationService.Model.GetReplicationRunsRequest)">
+            <summary>
+            The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationRuns for a ReplicationJob.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetReplicationRuns service method.</param>
+            
+            <returns>The response from the GetReplicationRuns service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetReplicationRunsAsync(Amazon.ServerMigrationService.Model.GetReplicationRunsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetReplicationRuns operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetReplicationRuns operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetServers(Amazon.ServerMigrationService.Model.GetServersRequest)">
+            <summary>
+            The GetServers API returns a list of all servers in your server catalog. For this
+            call to succeed, you must previously have called ImportServerCatalog.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetServers service method.</param>
+            
+            <returns>The response from the GetServers service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.GetServersAsync(Amazon.ServerMigrationService.Model.GetServersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetServers operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetServers operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.ImportServerCatalog(Amazon.ServerMigrationService.Model.ImportServerCatalogRequest)">
+            <summary>
+            The ImportServerCatalog API is used to gather the complete list of on-premises servers
+            on your premises. This API call requires connectors to be installed and monitoring
+            all servers you would like imported. This API call returns immediately, but may take
+            some time to retrieve all of the servers.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ImportServerCatalog service method.</param>
+            
+            <returns>The response from the ImportServerCatalog service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException">
+            No connectors are available to handle this request. Please associate connector(s)
+            and verify any existing connectors are healthy and can respond to requests.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.ImportServerCatalogAsync(Amazon.ServerMigrationService.Model.ImportServerCatalogRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ImportServerCatalog operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ImportServerCatalog operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.StartOnDemandReplicationRun(Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest)">
+            <summary>
+            The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in
+            addition to those that are scheduled based on your frequency). This ReplicationRun
+            will start immediately. StartOnDemandReplicationRun is subject to limits on how many
+            on demand ReplicationRuns you may call per 24-hour period.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartOnDemandReplicationRun service method.</param>
+            
+            <returns>The response from the StartOnDemandReplicationRun service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException">
+            This user has exceeded the maximum allowed Replication Run limit.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.StartOnDemandReplicationRunAsync(Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StartOnDemandReplicationRun operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StartOnDemandReplicationRun operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.UpdateReplicationJob(Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest)">
+            <summary>
+            The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob
+            created using CreateReplicationJob. Calling this API will affect the next scheduled
+            ReplicationRun.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateReplicationJob service method.</param>
+            
+            <returns>The response from the UpdateReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InternalErrorException">
+            An internal error has occured.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException">
+            The specified Replication Job cannot be found.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException">
+            The provided server cannot be replicated.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.AmazonServerMigrationServiceClient.UpdateReplicationJobAsync(Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the UpdateReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the UpdateReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Amazon.ServerMigrationService.IAmazonServerMigrationService">
+             <summary>
+             Interface for accessing ServerMigrationService
+            
+             Amazon Server Migration Service automates the process of migrating servers to EC2.
+             </summary>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.CreateReplicationJob(Amazon.ServerMigrationService.Model.CreateReplicationJobRequest)">
+            <summary>
+            The CreateReplicationJob API is used to create a ReplicationJob to replicate a server
+            on AWS. Call this API to first create a ReplicationJob, which will then schedule periodic
+            ReplicationRuns to replicate your server to AWS. Each ReplicationRun will result in
+            the creation of an AWS AMI.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateReplicationJob service method.</param>
+            
+            <returns>The response from the CreateReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InternalErrorException">
+            An internal error has occured.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException">
+            No connectors are available to handle this request. Please associate connector(s)
+            and verify any existing connectors are healthy and can respond to requests.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobAlreadyExistsException">
+            An active Replication Job already exists for the specified server.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException">
+            The provided server cannot be replicated.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.CreateReplicationJobAsync(Amazon.ServerMigrationService.Model.CreateReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DeleteReplicationJob(Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest)">
+            <summary>
+            The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further
+            ReplicationRuns. This will delete the contents of the S3 bucket used to store SMS
+            artifacts, but will not delete any AMIs created by the SMS service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteReplicationJob service method.</param>
+            
+            <returns>The response from the DeleteReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException">
+            The specified Replication Job cannot be found.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DeleteReplicationJobAsync(Amazon.ServerMigrationService.Model.DeleteReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DeleteServerCatalog(Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest)">
+            <summary>
+            The DeleteServerCatalog API clears all servers from your server catalog. This means
+            that these servers will no longer be accessible to the Server Migration Service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteServerCatalog service method.</param>
+            
+            <returns>The response from the DeleteServerCatalog service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DeleteServerCatalogAsync(Amazon.ServerMigrationService.Model.DeleteServerCatalogRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteServerCatalog operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteServerCatalog operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DisassociateConnector(Amazon.ServerMigrationService.Model.DisassociateConnectorRequest)">
+            <summary>
+            The DisassociateConnector API will disassociate a connector from the Server Migration
+            Service, rendering it unavailable to support replication jobs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DisassociateConnector service method.</param>
+            
+            <returns>The response from the DisassociateConnector service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.DisassociateConnectorAsync(Amazon.ServerMigrationService.Model.DisassociateConnectorRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DisassociateConnector operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DisassociateConnector operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetConnectors(Amazon.ServerMigrationService.Model.GetConnectorsRequest)">
+            <summary>
+            The GetConnectors API returns a list of connectors that are registered with the Server
+            Migration Service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetConnectors service method.</param>
+            
+            <returns>The response from the GetConnectors service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetConnectorsAsync(Amazon.ServerMigrationService.Model.GetConnectorsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetConnectors operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetConnectors operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetReplicationJobs(Amazon.ServerMigrationService.Model.GetReplicationJobsRequest)">
+            <summary>
+            The GetReplicationJobs API will return all of your ReplicationJobs and their details.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationJobs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetReplicationJobs service method.</param>
+            
+            <returns>The response from the GetReplicationJobs service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetReplicationJobsAsync(Amazon.ServerMigrationService.Model.GetReplicationJobsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetReplicationJobs operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetReplicationJobs operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetReplicationRuns(Amazon.ServerMigrationService.Model.GetReplicationRunsRequest)">
+            <summary>
+            The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob.
+            This API returns a paginated list, that may be consecutively called with nextToken
+            to retrieve all ReplicationRuns for a ReplicationJob.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetReplicationRuns service method.</param>
+            
+            <returns>The response from the GetReplicationRuns service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetReplicationRunsAsync(Amazon.ServerMigrationService.Model.GetReplicationRunsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetReplicationRuns operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetReplicationRuns operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetServers(Amazon.ServerMigrationService.Model.GetServersRequest)">
+            <summary>
+            The GetServers API returns a list of all servers in your server catalog. For this
+            call to succeed, you must previously have called ImportServerCatalog.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetServers service method.</param>
+            
+            <returns>The response from the GetServers service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.GetServersAsync(Amazon.ServerMigrationService.Model.GetServersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetServers operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetServers operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.ImportServerCatalog(Amazon.ServerMigrationService.Model.ImportServerCatalogRequest)">
+            <summary>
+            The ImportServerCatalog API is used to gather the complete list of on-premises servers
+            on your premises. This API call requires connectors to be installed and monitoring
+            all servers you would like imported. This API call returns immediately, but may take
+            some time to retrieve all of the servers.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ImportServerCatalog service method.</param>
+            
+            <returns>The response from the ImportServerCatalog service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.NoConnectorsAvailableException">
+            No connectors are available to handle this request. Please associate connector(s)
+            and verify any existing connectors are healthy and can respond to requests.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.ImportServerCatalogAsync(Amazon.ServerMigrationService.Model.ImportServerCatalogRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ImportServerCatalog operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ImportServerCatalog operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.StartOnDemandReplicationRun(Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest)">
+            <summary>
+            The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in
+            addition to those that are scheduled based on your frequency). This ReplicationRun
+            will start immediately. StartOnDemandReplicationRun is subject to limits on how many
+            on demand ReplicationRuns you may call per 24-hour period.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartOnDemandReplicationRun service method.</param>
+            
+            <returns>The response from the StartOnDemandReplicationRun service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationRunLimitExceededException">
+            This user has exceeded the maximum allowed Replication Run limit.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.StartOnDemandReplicationRunAsync(Amazon.ServerMigrationService.Model.StartOnDemandReplicationRunRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StartOnDemandReplicationRun operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StartOnDemandReplicationRun operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.UpdateReplicationJob(Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest)">
+            <summary>
+            The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob
+            created using CreateReplicationJob. Calling this API will affect the next scheduled
+            ReplicationRun.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateReplicationJob service method.</param>
+            
+            <returns>The response from the UpdateReplicationJob service method, as returned by ServerMigrationService.</returns>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InternalErrorException">
+            An internal error has occured.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.InvalidParameterException">
+            A parameter specified in the request is not valid, is unsupported, or cannot be used.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.MissingRequiredParameterException">
+            The request is missing a required parameter. Ensure that you have supplied all the
+            required parameters for the request.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.OperationNotPermittedException">
+            The specified operation is not allowed. This error can occur for a number of reasons;
+            for example, you might be trying to start a Replication Run before seed Replication
+            Run.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ReplicationJobNotFoundException">
+            The specified Replication Job cannot be found.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.ServerCannotBeReplicatedException">
+            The provided server cannot be replicated.
+            </exception>
+            <exception cref="T:Amazon.ServerMigrationService.Model.UnauthorizedOperationException">
+            This user does not have permissions to perform this operation.
+            </exception>
+        </member>
+        <member name="M:Amazon.ServerMigrationService.IAmazonServerMigrationService.UpdateReplicationJobAsync(Amazon.ServerMigrationService.Model.UpdateReplicationJobRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the UpdateReplicationJob operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the UpdateReplicationJob operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+    </members>
+</doc>

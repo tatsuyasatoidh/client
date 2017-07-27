@@ -1,0 +1,3129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Athena</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Athena.AmazonAthenaConfig">
+            <summary>
+            Configuration for accessing Amazon Athena service
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.AmazonAthenaConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.AmazonAthenaConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.AmazonAthenaConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.AmazonAthenaException">
+            <summary>
+             Common exception for the Athena service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonAthenaException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonAthenaException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonAthenaException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonAthenaException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonAthenaException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the AmazonAthenaException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Athena.ColumnNullable">
+            <summary>
+            Constants used for properties of type ColumnNullable.
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.ColumnNullable.NOT_NULL">
+            <summary>
+            Constant NOT_NULL for ColumnNullable
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.ColumnNullable.NULLABLE">
+            <summary>
+            Constant NULLABLE for ColumnNullable
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.ColumnNullable.UNKNOWN">
+            <summary>
+            Constant UNKNOWN for ColumnNullable
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.ColumnNullable.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.ColumnNullable.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Athena.ColumnNullable.op_Implicit(System.String)~Amazon.Athena.ColumnNullable">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.EncryptionOption">
+            <summary>
+            Constants used for properties of type EncryptionOption.
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.EncryptionOption.CSE_KMS">
+            <summary>
+            Constant CSE_KMS for EncryptionOption
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.EncryptionOption.SSE_KMS">
+            <summary>
+            Constant SSE_KMS for EncryptionOption
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.EncryptionOption.SSE_S3">
+            <summary>
+            Constant SSE_S3 for EncryptionOption
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.EncryptionOption.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.EncryptionOption.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Athena.EncryptionOption.op_Implicit(System.String)~Amazon.Athena.EncryptionOption">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.QueryExecutionState">
+            <summary>
+            Constants used for properties of type QueryExecutionState.
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.QueryExecutionState.CANCELLED">
+            <summary>
+            Constant CANCELLED for QueryExecutionState
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.QueryExecutionState.FAILED">
+            <summary>
+            Constant FAILED for QueryExecutionState
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.QueryExecutionState.QUEUED">
+            <summary>
+            Constant QUEUED for QueryExecutionState
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.QueryExecutionState.RUNNING">
+            <summary>
+            Constant RUNNING for QueryExecutionState
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.QueryExecutionState.SUCCEEDED">
+            <summary>
+            Constant SUCCEEDED for QueryExecutionState
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.QueryExecutionState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.QueryExecutionState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Athena.QueryExecutionState.op_Implicit(System.String)~Amazon.Athena.QueryExecutionState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.ThrottleReason">
+            <summary>
+            Constants used for properties of type ThrottleReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.Athena.ThrottleReason.CONCURRENT_QUERY_LIMIT_EXCEEDED">
+            <summary>
+            Constant CONCURRENT_QUERY_LIMIT_EXCEEDED for ThrottleReason
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.ThrottleReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.ThrottleReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Athena.ThrottleReason.op_Implicit(System.String)~Amazon.Athena.ThrottleReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.AmazonAthenaRequest">
+            <summary>
+            Base class for Athena operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.BatchGetNamedQueryRequest">
+            <summary>
+            Container for the parameters to the BatchGetNamedQuery operation.
+            Returns the details of a single named query or a list of up to 50 queries, which you
+            provide as an array of query ID strings. Use <a>ListNamedQueries</a> to get the list
+            of named query IDs. If information could not be retrieved for a submitted query ID,
+            information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>.
+            Named queries are different from executed queries. Use <a>BatchGetQueryExecution</a>
+            to get details about each unique query execution, and <a>ListQueryExecutions</a> to
+            get a list of query execution IDs.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetNamedQueryRequest.NamedQueryIds">
+            <summary>
+            Gets and sets the property NamedQueryIds. 
+            <para>
+            An array of query IDs.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.BatchGetNamedQueryResponse">
+            <summary>
+            This is the response object from the BatchGetNamedQuery operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetNamedQueryResponse.NamedQueries">
+            <summary>
+            Gets and sets the property NamedQueries. 
+            <para>
+            Information about the named query IDs submitted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetNamedQueryResponse.UnprocessedNamedQueryIds">
+            <summary>
+            Gets and sets the property UnprocessedNamedQueryIds. 
+            <para>
+            Information about provided query IDs.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.BatchGetQueryExecutionRequest">
+            <summary>
+            Container for the parameters to the BatchGetQueryExecution operation.
+            Returns the details of a single query execution or a list of up to 50 query executions,
+            which you provide as an array of query execution ID strings. To get a list of query
+            execution IDs, use <a>ListQueryExecutions</a>. Query executions are different from
+            named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named queries.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetQueryExecutionRequest.QueryExecutionIds">
+            <summary>
+            Gets and sets the property QueryExecutionIds. 
+            <para>
+            An array of query execution IDs.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.BatchGetQueryExecutionResponse">
+            <summary>
+            This is the response object from the BatchGetQueryExecution operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetQueryExecutionResponse.QueryExecutions">
+            <summary>
+            Gets and sets the property QueryExecutions. 
+            <para>
+            Information about a query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.BatchGetQueryExecutionResponse.UnprocessedQueryExecutionIds">
+            <summary>
+            Gets and sets the property UnprocessedQueryExecutionIds. 
+            <para>
+            Information about the query executions that failed to run.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ColumnInfo">
+            <summary>
+            Information about the columns in a query execution result.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.CaseSensitive">
+            <summary>
+            Gets and sets the property CaseSensitive. 
+            <para>
+            Indicates whether values in the column are case-sensitive.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.CatalogName">
+            <summary>
+            Gets and sets the property CatalogName. 
+            <para>
+            The catalog to which the query results belong.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Label">
+            <summary>
+            Gets and sets the property Label. 
+            <para>
+            A column label.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the column.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Nullable">
+            <summary>
+            Gets and sets the property Nullable. 
+            <para>
+            Indicates the column's nullable status.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Precision">
+            <summary>
+            Gets and sets the property Precision. 
+            <para>
+            For <code>DECIMAL</code> data types, specifies the total number of digits, up to 38.
+            For performance reasons, we recommend up to 18 digits.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Scale">
+            <summary>
+            Gets and sets the property Scale. 
+            <para>
+            For <code>DECIMAL</code> data types, specifies the total number of digits in the fractional
+            part of the value. Defaults to 0.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.SchemaName">
+            <summary>
+            Gets and sets the property SchemaName. 
+            <para>
+            The schema name (database name) to which the query results belong.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.TableName">
+            <summary>
+            Gets and sets the property TableName. 
+            <para>
+            The table name for the query results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ColumnInfo.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            The data type of the column.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.CreateNamedQueryRequest">
+            <summary>
+            Container for the parameters to the CreateNamedQuery operation.
+            Creates a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryRequest.ClientRequestToken">
+            <summary>
+            Gets and sets the property ClientRequestToken. 
+            <para>
+            A unique case-sensitive string used to ensure the request to create the query is idempotent
+            (executes only once). If another <code>CreateNamedQuery</code> request is received,
+            the same response is returned and another query is not created. If a parameter has
+            changed, for example, the <code>QueryString</code>, an error is returned.
+            </para>
+             <important> 
+            <para>
+            This token is listed as not required because AWS SDKs (for example the AWS SDK for
+            Java) auto-generate the token for users. If you are not using the AWS SDK or the AWS
+            CLI, you must provide this token or the action will fail.
+            </para>
+             </important>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryRequest.Database">
+            <summary>
+            Gets and sets the property Database. 
+            <para>
+            The database to which the query belongs.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A brief explanation of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The plain language name for the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryRequest.QueryString">
+            <summary>
+            Gets and sets the property QueryString. 
+            <para>
+            The text of the query itself. In other words, all query statements.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.CreateNamedQueryResponse">
+            <summary>
+            This is the response object from the CreateNamedQuery operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.CreateNamedQueryResponse.NamedQueryId">
+            <summary>
+            Gets and sets the property NamedQueryId. 
+            <para>
+            The unique ID of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.Datum">
+            <summary>
+            A piece of data (a field in the table).
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.Datum.VarCharValue">
+            <summary>
+            Gets and sets the property VarCharValue. 
+            <para>
+            The value of the datum.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.DeleteNamedQueryRequest">
+            <summary>
+            Container for the parameters to the DeleteNamedQuery operation.
+            Deletes a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.DeleteNamedQueryRequest.NamedQueryId">
+            <summary>
+            Gets and sets the property NamedQueryId. 
+            <para>
+            The unique ID of the query to delete.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.DeleteNamedQueryResponse">
+            <summary>
+            This is the response object from the DeleteNamedQuery operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.EncryptionConfiguration">
+            <summary>
+            If query results are encrypted in Amazon S3, indicates the Amazon S3 encryption option
+            used.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.EncryptionConfiguration.EncryptionOption">
+            <summary>
+            Gets and sets the property EncryptionOption. 
+            <para>
+            Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (<code>SSE-S3</code>),
+            server-side encryption with KMS-managed keys (<code>SSE-KMS</code>), or client-side
+            encryption with KMS-managed keys (CSE-KMS) is used.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.EncryptionConfiguration.KmsKey">
+            <summary>
+            Gets and sets the property KmsKey. 
+            <para>
+            For <code>SSE-KMS</code> and <code>CSE-KMS</code>, this is the KMS key ARN or ID.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetNamedQueryRequest">
+            <summary>
+            Container for the parameters to the GetNamedQuery operation.
+            Returns information about a single query.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetNamedQueryRequest.NamedQueryId">
+            <summary>
+            Gets and sets the property NamedQueryId. 
+            <para>
+            The unique ID of the query. Use <a>ListNamedQueries</a> to get query IDs.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetNamedQueryResponse">
+            <summary>
+            This is the response object from the GetNamedQuery operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetNamedQueryResponse.NamedQuery">
+            <summary>
+            Gets and sets the property NamedQuery. 
+            <para>
+            Information about the query.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetQueryExecutionRequest">
+            <summary>
+            Container for the parameters to the GetQueryExecution operation.
+            Returns information about a single execution of a query. Each time a query executes,
+            information about the query execution is saved with a unique ID.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryExecutionRequest.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique ID of the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetQueryExecutionResponse">
+            <summary>
+            This is the response object from the GetQueryExecution operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryExecutionResponse.QueryExecution">
+            <summary>
+            Gets and sets the property QueryExecution. 
+            <para>
+            Information about the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetQueryResultsRequest">
+            <summary>
+            Container for the parameters to the GetQueryResults operation.
+            Returns the results of a single query execution specified by <code>QueryExecutionId</code>.
+            This request does not execute the query but returns results. Use <a>StartQueryExecution</a>
+            to run a query.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryResultsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results (rows) to return in this request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryResultsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token that specifies where to start pagination if a previous request was truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryResultsRequest.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique ID of the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.GetQueryResultsResponse">
+            <summary>
+            This is the response object from the GetQueryResults operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryResultsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to be used by the next request if this request is truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.GetQueryResultsResponse.ResultSet">
+            <summary>
+            Gets and sets the property ResultSet. 
+            <para>
+            The results of the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.InternalServerException">
+            <summary>
+             Athena exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InternalServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InternalServerException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Athena.Model.InvalidRequestException">
+            <summary>
+             Athena exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.InvalidRequestException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InvalidRequestException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Athena.Model.ListNamedQueriesRequest">
+            <summary>
+            Container for the parameters to the ListNamedQueries operation.
+            Provides a list of all available query IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListNamedQueriesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of queries to return in this request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListNamedQueriesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token that specifies where to start pagination if a previous request was truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ListNamedQueriesResponse">
+            <summary>
+            This is the response object from the ListNamedQueries operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListNamedQueriesResponse.NamedQueryIds">
+            <summary>
+            Gets and sets the property NamedQueryIds. 
+            <para>
+            The list of unique query IDs.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListNamedQueriesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to be used by the next request if this request is truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ListQueryExecutionsRequest">
+            <summary>
+            Container for the parameters to the ListQueryExecutions operation.
+            Provides a list of all available query execution IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListQueryExecutionsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of query executions to return in this request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListQueryExecutionsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token that specifies where to start pagination if a previous request was truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ListQueryExecutionsResponse">
+            <summary>
+            This is the response object from the ListQueryExecutions operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListQueryExecutionsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token to be used by the next request if this request is truncated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ListQueryExecutionsResponse.QueryExecutionIds">
+            <summary>
+            Gets and sets the property QueryExecutionIds. 
+            <para>
+            The unique IDs of each query execution as an array of strings.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.NamedQuery">
+            <summary>
+            A query, where <code>QueryString</code> is the SQL query statements that comprise
+            the query.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.NamedQuery.Database">
+            <summary>
+            Gets and sets the property Database. 
+            <para>
+            The database to which the query belongs.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.NamedQuery.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A brief description of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.NamedQuery.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The plain-language name of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.NamedQuery.NamedQueryId">
+            <summary>
+            Gets and sets the property NamedQueryId. 
+            <para>
+            The unique identifier of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.NamedQuery.QueryString">
+            <summary>
+            Gets and sets the property QueryString. 
+            <para>
+            The SQL query statements that comprise the query.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.QueryExecution">
+            <summary>
+            Information about a single instance of a query execution.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.Query">
+            <summary>
+            Gets and sets the property Query. 
+            <para>
+            The SQL query statements which the query execution ran.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.QueryExecutionContext">
+            <summary>
+            Gets and sets the property QueryExecutionContext. 
+            <para>
+            The database in which the query execution occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique identifier for each query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.ResultConfiguration">
+            <summary>
+            Gets and sets the property ResultConfiguration. 
+            <para>
+            The location in Amazon S3 where query results were stored and the encryption option,
+            if any, used for query results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.Statistics">
+            <summary>
+            Gets and sets the property Statistics. 
+            <para>
+            The amount of data scanned during the query execution and the amount of time that
+            it took to execute.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecution.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The completion date, current state, submission time, and state change reason (if applicable)
+            for the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.QueryExecutionContext">
+            <summary>
+            The database in which the query execution occurs.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionContext.Database">
+            <summary>
+            Gets and sets the property Database. 
+            <para>
+            The name of the database.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.QueryExecutionStatistics">
+            <summary>
+            The amount of data scanned during the query execution and the amount of time that
+            it took to execute.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatistics.DataScannedInBytes">
+            <summary>
+            Gets and sets the property DataScannedInBytes. 
+            <para>
+            The number of bytes in the data that was queried.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatistics.EngineExecutionTimeInMillis">
+            <summary>
+            Gets and sets the property EngineExecutionTimeInMillis. 
+            <para>
+            The number of milliseconds that the query took to execute.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.QueryExecutionStatus">
+            <summary>
+            The completion date, current state, submission time, and state change reason (if applicable)
+            for the query execution.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatus.CompletionDateTime">
+            <summary>
+            Gets and sets the property CompletionDateTime. 
+            <para>
+            The date and time that the query completed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatus.State">
+            <summary>
+            Gets and sets the property State. 
+            <para>
+            The state of query execution. <code>SUBMITTED</code> indicates that the query is queued
+            for execution. <code>RUNNING</code> indicates that the query is scanning data and
+            returning results. <code>SUCCEEDED</code> indicates that the query completed without
+            error. <code>FAILED</code> indicates that the query experienced an error and did not
+            complete processing. <code>CANCELLED</code> indicates that user input interrupted
+            query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatus.StateChangeReason">
+            <summary>
+            Gets and sets the property StateChangeReason. 
+            <para>
+            Further detail about the status of the query.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.QueryExecutionStatus.SubmissionDateTime">
+            <summary>
+            Gets and sets the property SubmissionDateTime. 
+            <para>
+            The date and time that the query was submitted.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ResultConfiguration">
+            <summary>
+            The location in Amazon S3 where query results are stored and the encryption option,
+            if any, used for query results.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ResultConfiguration.EncryptionConfiguration">
+            <summary>
+            Gets and sets the property EncryptionConfiguration. 
+            <para>
+            If query results are encrypted in S3, indicates the S3 encryption option used (for
+            example, <code>SSE-KMS</code> or <code>CSE-KMS</code> and key information.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ResultConfiguration.OutputLocation">
+            <summary>
+            Gets and sets the property OutputLocation. 
+            <para>
+            The location in S3 where query results are stored.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ResultSet">
+            <summary>
+            The metadata and rows that comprise a query result set. The metadata describes the
+            column structure and data types.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ResultSet.ResultSetMetadata">
+            <summary>
+            Gets and sets the property ResultSetMetadata. 
+            <para>
+            The metadata that describes the column structure and data types of a table of query
+            results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ResultSet.Rows">
+            <summary>
+            Gets and sets the property Rows. 
+            <para>
+            The rows in the table.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.ResultSetMetadata">
+            <summary>
+            The metadata that describes the column structure and data types of a table of query
+            results.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.ResultSetMetadata.ColumnInfo">
+            <summary>
+            Gets and sets the property ColumnInfo. 
+            <para>
+            Information about the columns in a query execution result.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.Row">
+            <summary>
+            The rows that comprise a query result table.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.Row.Data">
+            <summary>
+            Gets and sets the property Data. 
+            <para>
+            The data that populates a row in a query result table.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.StartQueryExecutionRequest">
+            <summary>
+            Container for the parameters to the StartQueryExecution operation.
+            Runs (executes) the SQL query statements contained in the <code>Query</code> string.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StartQueryExecutionRequest.ClientRequestToken">
+            <summary>
+            Gets and sets the property ClientRequestToken. 
+            <para>
+            A unique case-sensitive string used to ensure the request to create the query is idempotent
+            (executes only once). If another <code>StartQueryExecution</code> request is received,
+            the same response is returned and another query is not created. If a parameter has
+            changed, for example, the <code>QueryString</code>, an error is returned.
+            </para>
+             <important> 
+            <para>
+            This token is listed as not required because AWS SDKs (for example the AWS SDK for
+            Java) auto-generate the token for users. If you are not using the AWS SDK or the AWS
+            CLI, you must provide this token or the action will fail.
+            </para>
+             </important>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StartQueryExecutionRequest.QueryExecutionContext">
+            <summary>
+            Gets and sets the property QueryExecutionContext. 
+            <para>
+            The database within which the query executes.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StartQueryExecutionRequest.QueryString">
+            <summary>
+            Gets and sets the property QueryString. 
+            <para>
+            The SQL query statements to be executed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StartQueryExecutionRequest.ResultConfiguration">
+            <summary>
+            Gets and sets the property ResultConfiguration. 
+            <para>
+            Specifies information about where and how to save the results of the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.StartQueryExecutionResponse">
+            <summary>
+            This is the response object from the StartQueryExecution operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StartQueryExecutionResponse.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique ID of the query that ran as a result of this request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.StopQueryExecutionRequest">
+            <summary>
+            Container for the parameters to the StopQueryExecution operation.
+            Stops a query execution.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.StopQueryExecutionRequest.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique ID of the query execution to stop.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.StopQueryExecutionResponse">
+            <summary>
+            This is the response object from the StopQueryExecution operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.TooManyRequestsException">
+            <summary>
+             Athena exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.String)">
+            <summary>
+            Constructs a new TooManyRequestsException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of TooManyRequestsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of TooManyRequestsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of TooManyRequestsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of TooManyRequestsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Athena.Model.TooManyRequestsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the TooManyRequestsException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Athena.Model.UnprocessedNamedQueryId">
+            <summary>
+            Information about a named query ID that could not be processed.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedNamedQueryId.ErrorCode">
+            <summary>
+            Gets and sets the property ErrorCode. 
+            <para>
+            The error code returned when the processing request for the named query failed, if
+            applicable.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedNamedQueryId.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            The error message returned when the processing request for the named query failed,
+            if applicable.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedNamedQueryId.NamedQueryId">
+            <summary>
+            Gets and sets the property NamedQueryId. 
+            <para>
+            The unique identifier of the named query.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.UnprocessedQueryExecutionId">
+            <summary>
+            Describes a query execution that failed to process.
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedQueryExecutionId.ErrorCode">
+            <summary>
+            Gets and sets the property ErrorCode. 
+            <para>
+            The error code returned when the query execution failed to process, if applicable.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedQueryExecutionId.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            The error message returned when the query execution failed to process, if applicable.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Athena.Model.UnprocessedQueryExecutionId.QueryExecutionId">
+            <summary>
+            Gets and sets the property QueryExecutionId. 
+            <para>
+            The unique identifier of the query execution.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryRequestMarshaller">
+            <summary>
+            BatchGetNamedQuery Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryRequestMarshaller.Marshall(Amazon.Athena.Model.BatchGetNamedQueryRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetNamedQuery operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetNamedQueryResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionRequestMarshaller">
+            <summary>
+            BatchGetQueryExecution Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionRequestMarshaller.Marshall(Amazon.Athena.Model.BatchGetQueryExecutionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetQueryExecution operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.BatchGetQueryExecutionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ColumnInfoUnmarshaller">
+            <summary>
+            Response Unmarshaller for ColumnInfo Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ColumnInfoUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#ColumnInfo,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ColumnInfoUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ColumnInfoUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryRequestMarshaller">
+            <summary>
+            CreateNamedQuery Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryRequestMarshaller.Marshall(Amazon.Athena.Model.CreateNamedQueryRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateNamedQuery operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.CreateNamedQueryResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.DatumUnmarshaller">
+            <summary>
+            Response Unmarshaller for Datum Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DatumUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#Datum,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DatumUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.DatumUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryRequestMarshaller">
+            <summary>
+            DeleteNamedQuery Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryRequestMarshaller.Marshall(Amazon.Athena.Model.DeleteNamedQueryRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteNamedQuery operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.DeleteNamedQueryResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller">
+            <summary>
+            EncryptionConfiguration Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller.Marshall(Amazon.Athena.Model.EncryptionConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for EncryptionConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#EncryptionConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.EncryptionConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryRequestMarshaller">
+            <summary>
+            GetNamedQuery Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryRequestMarshaller.Marshall(Amazon.Athena.Model.GetNamedQueryRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetNamedQuery operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.GetNamedQueryResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionRequestMarshaller">
+            <summary>
+            GetQueryExecution Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionRequestMarshaller.Marshall(Amazon.Athena.Model.GetQueryExecutionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetQueryExecution operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryExecutionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsRequestMarshaller">
+            <summary>
+            GetQueryResults Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsRequestMarshaller.Marshall(Amazon.Athena.Model.GetQueryResultsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetQueryResults operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.GetQueryResultsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesRequestMarshaller">
+            <summary>
+            ListNamedQueries Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesRequestMarshaller.Marshall(Amazon.Athena.Model.ListNamedQueriesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListNamedQueries operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ListNamedQueriesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsRequestMarshaller">
+            <summary>
+            ListQueryExecutions Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsRequestMarshaller.Marshall(Amazon.Athena.Model.ListQueryExecutionsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListQueryExecutions operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ListQueryExecutionsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.NamedQueryUnmarshaller">
+            <summary>
+            Response Unmarshaller for NamedQuery Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.NamedQueryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#NamedQuery,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.NamedQueryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.NamedQueryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextMarshaller">
+            <summary>
+            QueryExecutionContext Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextMarshaller.Marshall(Amazon.Athena.Model.QueryExecutionContext,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextUnmarshaller">
+            <summary>
+            Response Unmarshaller for QueryExecutionContext Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#QueryExecutionContext,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionContextUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatisticsUnmarshaller">
+            <summary>
+            Response Unmarshaller for QueryExecutionStatistics Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatisticsUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#QueryExecutionStatistics,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatisticsUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatisticsUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatusUnmarshaller">
+            <summary>
+            Response Unmarshaller for QueryExecutionStatus Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatusUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#QueryExecutionStatus,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatusUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionStatusUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionUnmarshaller">
+            <summary>
+            Response Unmarshaller for QueryExecution Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#QueryExecution,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.QueryExecutionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationMarshaller">
+            <summary>
+            ResultConfiguration Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationMarshaller.Marshall(Amazon.Athena.Model.ResultConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResultConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#ResultConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ResultConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetMetadataUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResultSetMetadata Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetMetadataUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#ResultSetMetadata,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetMetadataUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetMetadataUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResultSet Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#ResultSet,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.ResultSetUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.RowUnmarshaller">
+            <summary>
+            Response Unmarshaller for Row Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.RowUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#Row,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.RowUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.RowUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionRequestMarshaller">
+            <summary>
+            StartQueryExecution Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionRequestMarshaller.Marshall(Amazon.Athena.Model.StartQueryExecutionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StartQueryExecution operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.StartQueryExecutionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionRequestMarshaller">
+            <summary>
+            StopQueryExecution Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionRequestMarshaller.Marshall(Amazon.Athena.Model.StopQueryExecutionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StopQueryExecution operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.StopQueryExecutionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedNamedQueryIdUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnprocessedNamedQueryId Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedNamedQueryIdUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#UnprocessedNamedQueryId,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedNamedQueryIdUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedNamedQueryIdUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedQueryExecutionIdUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnprocessedQueryExecutionId Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedQueryExecutionIdUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Athena#Model#UnprocessedQueryExecutionId,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedQueryExecutionIdUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Athena.Model.Internal.MarshallTransformations.UnprocessedQueryExecutionIdUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Athena.AmazonAthenaClient">
+             <summary>
+             Implementation for accessing Athena
+            
+             Amazon Athena is an interactive query service that lets you use standard SQL to analyze
+             data directly in Amazon S3. You can point Athena at your data in Amazon S3 and run
+             ad-hoc queries and get results in seconds. Athena is serverless, so there is no infrastructure
+             to set up or manage. You pay only for the queries you run. Athena scales automatically—executing
+             queries in parallel—so results are fast, even with large datasets and complex queries.
+             For more information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What
+             is Amazon Athena</a> in the <i>Amazon Athena User Guide</i>.
+             
+              
+             <para>
+             For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+             and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor">
+             <summary>
+             Constructs AmazonAthenaClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonAthenaClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(Amazon.Athena.AmazonAthenaConfig)">
+             <summary>
+             Constructs AmazonAthenaClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonAthenaClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Athena.AmazonAthenaConfig)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Credentials and an
+            AmazonAthenaClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonAthenaClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String,Amazon.Athena.AmazonAthenaConfig)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonAthenaClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonAthenaClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.#ctor(System.String,System.String,System.String,Amazon.Athena.AmazonAthenaConfig)">
+            <summary>
+            Constructs AmazonAthenaClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonAthenaClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonAthenaClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.BatchGetNamedQuery(Amazon.Athena.Model.BatchGetNamedQueryRequest)">
+            <summary>
+            Returns the details of a single named query or a list of up to 50 queries, which you
+            provide as an array of query ID strings. Use <a>ListNamedQueries</a> to get the list
+            of named query IDs. If information could not be retrieved for a submitted query ID,
+            information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>.
+            Named queries are different from executed queries. Use <a>BatchGetQueryExecution</a>
+            to get details about each unique query execution, and <a>ListQueryExecutions</a> to
+            get a list of query execution IDs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetNamedQuery service method.</param>
+            
+            <returns>The response from the BatchGetNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery">REST API Reference for BatchGetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.BatchGetNamedQueryAsync(Amazon.Athena.Model.BatchGetNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the BatchGetNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the BatchGetNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery">REST API Reference for BatchGetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.BatchGetQueryExecution(Amazon.Athena.Model.BatchGetQueryExecutionRequest)">
+            <summary>
+            Returns the details of a single query execution or a list of up to 50 query executions,
+            which you provide as an array of query execution ID strings. To get a list of query
+            execution IDs, use <a>ListQueryExecutions</a>. Query executions are different from
+            named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named queries.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetQueryExecution service method.</param>
+            
+            <returns>The response from the BatchGetQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution">REST API Reference for BatchGetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.BatchGetQueryExecutionAsync(Amazon.Athena.Model.BatchGetQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the BatchGetQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the BatchGetQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution">REST API Reference for BatchGetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.CreateNamedQuery(Amazon.Athena.Model.CreateNamedQueryRequest)">
+            <summary>
+            Creates a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateNamedQuery service method.</param>
+            
+            <returns>The response from the CreateNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateNamedQuery">REST API Reference for CreateNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.CreateNamedQueryAsync(Amazon.Athena.Model.CreateNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateNamedQuery">REST API Reference for CreateNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.DeleteNamedQuery(Amazon.Athena.Model.DeleteNamedQueryRequest)">
+            <summary>
+            Deletes a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteNamedQuery service method.</param>
+            
+            <returns>The response from the DeleteNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteNamedQuery">REST API Reference for DeleteNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.DeleteNamedQueryAsync(Amazon.Athena.Model.DeleteNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteNamedQuery">REST API Reference for DeleteNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetNamedQuery(Amazon.Athena.Model.GetNamedQueryRequest)">
+            <summary>
+            Returns information about a single query.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetNamedQuery service method.</param>
+            
+            <returns>The response from the GetNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetNamedQuery">REST API Reference for GetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetNamedQueryAsync(Amazon.Athena.Model.GetNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetNamedQuery">REST API Reference for GetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetQueryExecution(Amazon.Athena.Model.GetQueryExecutionRequest)">
+            <summary>
+            Returns information about a single execution of a query. Each time a query executes,
+            information about the query execution is saved with a unique ID.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetQueryExecution service method.</param>
+            
+            <returns>The response from the GetQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryExecution">REST API Reference for GetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetQueryExecutionAsync(Amazon.Athena.Model.GetQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryExecution">REST API Reference for GetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetQueryResults(Amazon.Athena.Model.GetQueryResultsRequest)">
+            <summary>
+            Returns the results of a single query execution specified by <code>QueryExecutionId</code>.
+            This request does not execute the query but returns results. Use <a>StartQueryExecution</a>
+            to run a query.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetQueryResults service method.</param>
+            
+            <returns>The response from the GetQueryResults service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults">REST API Reference for GetQueryResults Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.GetQueryResultsAsync(Amazon.Athena.Model.GetQueryResultsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetQueryResults operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetQueryResults operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults">REST API Reference for GetQueryResults Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.ListNamedQueries(Amazon.Athena.Model.ListNamedQueriesRequest)">
+            <summary>
+            Provides a list of all available query IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListNamedQueries service method.</param>
+            
+            <returns>The response from the ListNamedQueries service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListNamedQueries">REST API Reference for ListNamedQueries Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.ListNamedQueriesAsync(Amazon.Athena.Model.ListNamedQueriesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListNamedQueries operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListNamedQueries operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListNamedQueries">REST API Reference for ListNamedQueries Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.ListQueryExecutions(Amazon.Athena.Model.ListQueryExecutionsRequest)">
+            <summary>
+            Provides a list of all available query execution IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListQueryExecutions service method.</param>
+            
+            <returns>The response from the ListQueryExecutions service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListQueryExecutions">REST API Reference for ListQueryExecutions Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.ListQueryExecutionsAsync(Amazon.Athena.Model.ListQueryExecutionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListQueryExecutions operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListQueryExecutions operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListQueryExecutions">REST API Reference for ListQueryExecutions Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.StartQueryExecution(Amazon.Athena.Model.StartQueryExecutionRequest)">
+            <summary>
+            Runs (executes) the SQL query statements contained in the <code>Query</code> string.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartQueryExecution service method.</param>
+            
+            <returns>The response from the StartQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.TooManyRequestsException">
+            Indicates that the request was throttled.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StartQueryExecution">REST API Reference for StartQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.StartQueryExecutionAsync(Amazon.Athena.Model.StartQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StartQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StartQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StartQueryExecution">REST API Reference for StartQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.StopQueryExecution(Amazon.Athena.Model.StopQueryExecutionRequest)">
+            <summary>
+            Stops a query execution.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StopQueryExecution service method.</param>
+            
+            <returns>The response from the StopQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StopQueryExecution">REST API Reference for StopQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.AmazonAthenaClient.StopQueryExecutionAsync(Amazon.Athena.Model.StopQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StopQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StopQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StopQueryExecution">REST API Reference for StopQueryExecution Operation</seealso>
+        </member>
+        <member name="T:Amazon.Athena.IAmazonAthena">
+             <summary>
+             Interface for accessing Athena
+            
+             Amazon Athena is an interactive query service that lets you use standard SQL to analyze
+             data directly in Amazon S3. You can point Athena at your data in Amazon S3 and run
+             ad-hoc queries and get results in seconds. Athena is serverless, so there is no infrastructure
+             to set up or manage. You pay only for the queries you run. Athena scales automatically—executing
+             queries in parallel—so results are fast, even with large datasets and complex queries.
+             For more information, see <a href="http://docs.aws.amazon.com/athena/latest/ug/what-is.html">What
+             is Amazon Athena</a> in the <i>Amazon Athena User Guide</i>.
+             
+              
+             <para>
+             For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+             and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.BatchGetNamedQuery(Amazon.Athena.Model.BatchGetNamedQueryRequest)">
+            <summary>
+            Returns the details of a single named query or a list of up to 50 queries, which you
+            provide as an array of query ID strings. Use <a>ListNamedQueries</a> to get the list
+            of named query IDs. If information could not be retrieved for a submitted query ID,
+            information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>.
+            Named queries are different from executed queries. Use <a>BatchGetQueryExecution</a>
+            to get details about each unique query execution, and <a>ListQueryExecutions</a> to
+            get a list of query execution IDs.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetNamedQuery service method.</param>
+            
+            <returns>The response from the BatchGetNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery">REST API Reference for BatchGetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.BatchGetNamedQueryAsync(Amazon.Athena.Model.BatchGetNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the BatchGetNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the BatchGetNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery">REST API Reference for BatchGetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.BatchGetQueryExecution(Amazon.Athena.Model.BatchGetQueryExecutionRequest)">
+            <summary>
+            Returns the details of a single query execution or a list of up to 50 query executions,
+            which you provide as an array of query execution ID strings. To get a list of query
+            execution IDs, use <a>ListQueryExecutions</a>. Query executions are different from
+            named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named queries.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetQueryExecution service method.</param>
+            
+            <returns>The response from the BatchGetQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution">REST API Reference for BatchGetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.BatchGetQueryExecutionAsync(Amazon.Athena.Model.BatchGetQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the BatchGetQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the BatchGetQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution">REST API Reference for BatchGetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.CreateNamedQuery(Amazon.Athena.Model.CreateNamedQueryRequest)">
+            <summary>
+            Creates a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateNamedQuery service method.</param>
+            
+            <returns>The response from the CreateNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateNamedQuery">REST API Reference for CreateNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.CreateNamedQueryAsync(Amazon.Athena.Model.CreateNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/CreateNamedQuery">REST API Reference for CreateNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.DeleteNamedQuery(Amazon.Athena.Model.DeleteNamedQueryRequest)">
+            <summary>
+            Deletes a named query.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteNamedQuery service method.</param>
+            
+            <returns>The response from the DeleteNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteNamedQuery">REST API Reference for DeleteNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.DeleteNamedQueryAsync(Amazon.Athena.Model.DeleteNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DeleteNamedQuery">REST API Reference for DeleteNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetNamedQuery(Amazon.Athena.Model.GetNamedQueryRequest)">
+            <summary>
+            Returns information about a single query.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetNamedQuery service method.</param>
+            
+            <returns>The response from the GetNamedQuery service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetNamedQuery">REST API Reference for GetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetNamedQueryAsync(Amazon.Athena.Model.GetNamedQueryRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetNamedQuery operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetNamedQuery operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetNamedQuery">REST API Reference for GetNamedQuery Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetQueryExecution(Amazon.Athena.Model.GetQueryExecutionRequest)">
+            <summary>
+            Returns information about a single execution of a query. Each time a query executes,
+            information about the query execution is saved with a unique ID.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetQueryExecution service method.</param>
+            
+            <returns>The response from the GetQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryExecution">REST API Reference for GetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetQueryExecutionAsync(Amazon.Athena.Model.GetQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryExecution">REST API Reference for GetQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetQueryResults(Amazon.Athena.Model.GetQueryResultsRequest)">
+            <summary>
+            Returns the results of a single query execution specified by <code>QueryExecutionId</code>.
+            This request does not execute the query but returns results. Use <a>StartQueryExecution</a>
+            to run a query.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetQueryResults service method.</param>
+            
+            <returns>The response from the GetQueryResults service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults">REST API Reference for GetQueryResults Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.GetQueryResultsAsync(Amazon.Athena.Model.GetQueryResultsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the GetQueryResults operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the GetQueryResults operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults">REST API Reference for GetQueryResults Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.ListNamedQueries(Amazon.Athena.Model.ListNamedQueriesRequest)">
+            <summary>
+            Provides a list of all available query IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListNamedQueries service method.</param>
+            
+            <returns>The response from the ListNamedQueries service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListNamedQueries">REST API Reference for ListNamedQueries Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.ListNamedQueriesAsync(Amazon.Athena.Model.ListNamedQueriesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListNamedQueries operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListNamedQueries operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListNamedQueries">REST API Reference for ListNamedQueries Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.ListQueryExecutions(Amazon.Athena.Model.ListQueryExecutionsRequest)">
+            <summary>
+            Provides a list of all available query execution IDs.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListQueryExecutions service method.</param>
+            
+            <returns>The response from the ListQueryExecutions service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListQueryExecutions">REST API Reference for ListQueryExecutions Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.ListQueryExecutionsAsync(Amazon.Athena.Model.ListQueryExecutionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListQueryExecutions operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListQueryExecutions operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/ListQueryExecutions">REST API Reference for ListQueryExecutions Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.StartQueryExecution(Amazon.Athena.Model.StartQueryExecutionRequest)">
+            <summary>
+            Runs (executes) the SQL query statements contained in the <code>Query</code> string.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartQueryExecution service method.</param>
+            
+            <returns>The response from the StartQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.TooManyRequestsException">
+            Indicates that the request was throttled.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StartQueryExecution">REST API Reference for StartQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.StartQueryExecutionAsync(Amazon.Athena.Model.StartQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StartQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StartQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StartQueryExecution">REST API Reference for StartQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.StopQueryExecution(Amazon.Athena.Model.StopQueryExecutionRequest)">
+            <summary>
+            Stops a query execution.
+            
+             
+            <para>
+            For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples
+            and Code Samples</a> in the <i>Amazon Athena User Guide</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StopQueryExecution service method.</param>
+            
+            <returns>The response from the StopQueryExecution service method, as returned by Athena.</returns>
+            <exception cref="T:Amazon.Athena.Model.InternalServerException">
+            Indicates a platform issue, which may be due to a transient condition or outage.
+            </exception>
+            <exception cref="T:Amazon.Athena.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter may be missing or out of range.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StopQueryExecution">REST API Reference for StopQueryExecution Operation</seealso>
+        </member>
+        <member name="M:Amazon.Athena.IAmazonAthena.StopQueryExecutionAsync(Amazon.Athena.Model.StopQueryExecutionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the StopQueryExecution operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the StopQueryExecution operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/StopQueryExecution">REST API Reference for StopQueryExecution Operation</seealso>
+        </member>
+    </members>
+</doc>

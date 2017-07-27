@@ -1,17 +1,22 @@
 ﻿Imports System.Runtime.InteropServices
 'mysqlを使う
 Imports MySql.Data.MySqlClient
+Imports Renci.SshNet
+Imports MysqlManage
+Imports System
+Imports System.IO
+Imports System.Text
 
-'Imports System
-'Imports System.IO
-'Imports System.Text
+'Imports Amazon.S3
+'Imports Amazon.S3.Model
+
+Imports Pomelo.EntityFrameworkCore.MySql
 
 
 Public Delegate Function CallBack(
     ByVal nCode As Integer,
     ByVal wParam As IntPtr,
     ByVal lParam As IntPtr) As Integer
-
 
 Public Class Form1
     Dim WH_MOUSE As Integer = 7
@@ -75,10 +80,16 @@ Public Class Form1
         ' 1.接続文字列を作成する
         Dim Builder = New MySqlConnectionStringBuilder()
         ' データベースに接続するために必要な情報をBuilderに与える
-        Builder.Server = "localhost"
+        Builder.Server = "pclog.c5q2rhfkfpib.us-west-2.rds.amazonaws.com"
         Builder.Port = 3306
+        Builder.Password = "idhpclogtool"
         Builder.UserID = "root"
         Builder.Database = "pclog"
+
+        'Builder.Server = "localhost"
+        'Builder.Port = 3306
+        'Builder.UserID = "root"
+        'Builder.Database = "pclog"
         Dim ConStr = Builder.ToString()
 
 
@@ -98,7 +109,6 @@ Public Class Form1
         SqlStr = "SELECT * FROM user WHERE user_name ='" + username + "' and machine_name='" + userspc + "'"
         ' 4.データ取得のためのアダプタの設定
         Dim Adapter = New MySqlDataAdapter(SqlStr, Con)
-
 
         ' 5.SQL文実行/gridに反映
         Dim Ds As New DataSet
@@ -156,10 +166,8 @@ Public Class Form1
         Dim Dss As New DataSet
         Adapter.Fill(Dss)
         If Dss.Tables(0).Rows.Count > 0 Then
-            MsgBox("今日のデータを引き継ぎます")
             Return Dss.Tables(0).Rows(0)("number_of_work")
         Else
-            MsgBox("おはようございます")
             COUNT = 0
             Return False
         End If
@@ -447,7 +455,8 @@ Public Class Form1
         Dim sw As New IO.StreamWriter(file_path,
             True,
             System.Text.Encoding.GetEncoding("shift_jis"))
-        sw.WriteLine(Label1.Text)
+        Dim InsertStr As String = Label1.Text + "," + "1"
+        sw.WriteLine(InsertStr)
         '閉じる 
         sw.Close()
     End Sub
@@ -495,49 +504,22 @@ Public Class Form1
         Else
             Insertlog()
         End If
+
+        Dim objS3Client As New AmazonS3Client
+        Dim objS3PutRequest As New PutObjectRequest
+        Dim objS3PutResponse As New PutObjectResponse
+
+        'バケットを指定
+        objS3PutRequest.BucketName = "elasticbeanstalk-us-west-2-443316351375"
+        'キーを指定
+        objS3PutRequest.Key = "log/" & username & "/log_" & dtToday.ToString("yyyyMMdd") & ".csv"
+        'アップロードするローカルファイルのパスを指定
+        objS3PutRequest.FilePath = "/tmp/PcLogTool/" & username & "/log_" & dtToday.ToString("yyyyMMdd") & ".txt"
+        'リクエストをパラメータに指定してPutObjectメソッドを実行
+        objS3PutResponse = objS3Client.PutObject(objS3PutRequest)
+
         MsgBox("ログをアップロードしました。")
-        'アップロードするファイル
-        Dim upFile As String = "/tmp/PcLogTool/" & username & "/log_" & dtToday.ToString("yyyyMMdd") & ".txt"
-        'アップロード先のURI
-        Dim u As New Uri("ftp://sv2.webcrow-php.netowl.jp/test.txt")
 
-        'FtpWebRequestの作成
-        Dim ftpReq As System.Net.FtpWebRequest = CType(System.Net.WebRequest.Create(u), System.Net.FtpWebRequest)
-        'ログインユーザー名とパスワードを設定
-        ftpReq.Credentials = New System.Net.NetworkCredential("pclog.webcrow.jp", "cosmic")
-        'MethodにWebRequestMethods.Ftp.UploadFile("STOR")を設定
-        ftpReq.Method = System.Net.WebRequestMethods.Ftp.UploadFile
-        '要求の完了後に接続を閉じる
-        ftpReq.KeepAlive = False
-        'ASCIIモードで転送する
-        ftpReq.UseBinary = False
-        'PASVモードを無効にする
-        ftpReq.UsePassive = False
-
-        'ファイルをアップロードするためのStreamを取得
-        Dim reqStrm As System.IO.Stream = ftpReq.GetRequestStream()
-        'アップロードするファイルを開く
-        Dim fs As New System.IO.FileStream(
-    upFile, System.IO.FileMode.Open, System.IO.FileAccess.Read)
-        'アップロードStreamに書き込む
-        Dim buffer(1023) As Byte
-        While True
-            Dim readSize As Integer = fs.Read(buffer, 0, buffer.Length)
-            If readSize = 0 Then
-                Exit While
-            End If
-            reqStrm.Write(buffer, 0, readSize)
-        End While
-        fs.Close()
-        reqStrm.Close()
-
-        'FtpWebResponseを取得
-        Dim ftpRes As System.Net.FtpWebResponse =
-    CType(ftpReq.GetResponse(), System.Net.FtpWebResponse)
-        'FTPサーバーから送信されたステータスを表示
-        Console.WriteLine("{0}: {1}", ftpRes.StatusCode, ftpRes.StatusDescription)
-        '閉じる
-        ftpRes.Close()
     End Sub
 
 End Class

@@ -1,0 +1,2600 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Shield</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Shield.AmazonShieldConfig">
+            <summary>
+            Configuration for accessing Amazon Shield service
+            </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.AmazonShieldConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.AmazonShieldConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.AmazonShieldConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.AmazonShieldException">
+            <summary>
+             Common exception for the Shield service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonShieldException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonShieldException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonShieldException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonShieldException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonShieldException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the AmazonShieldException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.SubResourceType">
+            <summary>
+            Constants used for properties of type SubResourceType.
+            </summary>
+        </member>
+        <member name="F:Amazon.Shield.SubResourceType.IP">
+            <summary>
+            Constant IP for SubResourceType
+            </summary>
+        </member>
+        <member name="F:Amazon.Shield.SubResourceType.URL">
+            <summary>
+            Constant URL for SubResourceType
+            </summary>
+        </member>
+        <member name="M:Amazon.Shield.SubResourceType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Shield.SubResourceType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Shield.SubResourceType.op_Implicit(System.String)~Amazon.Shield.SubResourceType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.AmazonShieldRequest">
+            <summary>
+            Base class for Shield operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.AttackDetail">
+            <summary>
+            The details of a DDoS attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.AttackCounters">
+            <summary>
+            Gets and sets the property AttackCounters. 
+            <para>
+            List of counters that describe the attack for the specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.AttackId">
+            <summary>
+            Gets and sets the property AttackId. 
+            <para>
+            The unique identifier (ID) of the attack.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The time the attack ended, in the format 2016-12-16T13:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.Mitigations">
+            <summary>
+            Gets and sets the property Mitigations. 
+            <para>
+            List of mitigation actions taken for the attack.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN (Amazon Resource Name) of the resource that was attacked.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time the attack started, in the format 2016-12-16T13:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackDetail.SubResources">
+            <summary>
+            Gets and sets the property SubResources. 
+            <para>
+            If applicable, additional detail about the resource being attacked, for example, IP
+            address or URL.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.AttackSummary">
+            <summary>
+            Summarizes all DDoS attacks for a specified time period.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackSummary.AttackId">
+            <summary>
+            Gets and sets the property AttackId. 
+            <para>
+            The unique identifier (ID) of the attack.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackSummary.AttackVectors">
+            <summary>
+            Gets and sets the property AttackVectors. 
+            <para>
+            The list of attacks for a specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackSummary.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The end time of the attack, in the format 2016-12-16T13:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackSummary.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN (Amazon Resource Name) of the resource that was attacked.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackSummary.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The start time of the attack, in the format 2016-12-16T13:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.AttackVectorDescription">
+            <summary>
+            Describes the attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.AttackVectorDescription.VectorType">
+            <summary>
+            Gets and sets the property VectorType. 
+            <para>
+            The attack type, for example, SNMP reflection or SYN flood.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.CreateProtectionRequest">
+            <summary>
+            Container for the parameters to the CreateProtection operation.
+            Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon
+            CloudFront distribution, Elastic Load Balancing load balancer, or an Amazon Route
+            53 hosted zone.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.CreateProtectionRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            Friendly name for the <code>Protection</code> you are creating.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.CreateProtectionRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN (Amazon Resource Name) of the resource to be protected.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.CreateProtectionResponse">
+            <summary>
+            This is the response object from the CreateProtection operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.CreateProtectionResponse.ProtectionId">
+            <summary>
+            Gets and sets the property ProtectionId. 
+            <para>
+            The unique identifier (ID) for the <a>Protection</a> object that is created.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.CreateSubscriptionRequest">
+            <summary>
+            Container for the parameters to the CreateSubscription operation.
+            Activates AWS Shield Advanced for an account.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.CreateSubscriptionResponse">
+            <summary>
+            This is the response object from the CreateSubscription operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DeleteProtectionRequest">
+            <summary>
+            Container for the parameters to the DeleteProtection operation.
+            Deletes an AWS Shield Advanced <a>Protection</a>.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DeleteProtectionRequest.ProtectionId">
+            <summary>
+            Gets and sets the property ProtectionId. 
+            <para>
+            The unique identifier (ID) for the <a>Protection</a> object to be deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DeleteProtectionResponse">
+            <summary>
+            This is the response object from the DeleteProtection operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DeleteSubscriptionRequest">
+            <summary>
+            Container for the parameters to the DeleteSubscription operation.
+            Removes AWS Shield Advanced from an account.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DeleteSubscriptionResponse">
+            <summary>
+            This is the response object from the DeleteSubscription operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeAttackRequest">
+            <summary>
+            Container for the parameters to the DescribeAttack operation.
+            Describes the details of a DDoS attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DescribeAttackRequest.AttackId">
+            <summary>
+            Gets and sets the property AttackId. 
+            <para>
+            The unique identifier (ID) for the attack that to be described.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeAttackResponse">
+            <summary>
+            This is the response object from the DescribeAttack operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DescribeAttackResponse.Attack">
+            <summary>
+            Gets and sets the property Attack. 
+            <para>
+            The attack that is described.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeProtectionRequest">
+            <summary>
+            Container for the parameters to the DescribeProtection operation.
+            Lists the details of a <a>Protection</a> object.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DescribeProtectionRequest.ProtectionId">
+            <summary>
+            Gets and sets the property ProtectionId. 
+            <para>
+            The unique identifier (ID) for the <a>Protection</a> object that is described.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeProtectionResponse">
+            <summary>
+            This is the response object from the DescribeProtection operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DescribeProtectionResponse.Protection">
+            <summary>
+            Gets and sets the property Protection. 
+            <para>
+            The <a>Protection</a> object that is described.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeSubscriptionRequest">
+            <summary>
+            Container for the parameters to the DescribeSubscription operation.
+            Provides details about the AWS Shield Advanced subscription for an account.
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.DescribeSubscriptionResponse">
+            <summary>
+            This is the response object from the DescribeSubscription operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.DescribeSubscriptionResponse.Subscription">
+            <summary>
+            Gets and sets the property Subscription. 
+            <para>
+            The AWS Shield Advanced subscription details for an account.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.InternalErrorException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalErrorException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InternalErrorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InternalErrorException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.InvalidOperationException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidOperationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidOperationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InvalidOperationException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.InvalidParameterException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidParameterException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidParameterException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidParameterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InvalidParameterException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.InvalidResourceException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidResourceException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidResourceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidResourceException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidResourceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidResourceException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.InvalidResourceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the InvalidResourceException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.LimitsExceededException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new LimitsExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of LimitsExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of LimitsExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitsExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitsExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LimitsExceededException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the LimitsExceededException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.ListAttacksRequest">
+            <summary>
+            Container for the parameters to the ListAttacks operation.
+            Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksRequest.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The end of the time period for the attacks.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of <a>AttackSummary</a> objects to be returned. If this is left
+            blank, the first 20 results will be returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The <code>ListAttacksRequest.NextMarker</code> value from a previous call to <code>ListAttacksRequest</code>.
+            Pass null if this is the first call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksRequest.ResourceArns">
+            <summary>
+            Gets and sets the property ResourceArns. 
+            <para>
+            The ARN (Amazon Resource Name) of the resource that was attacked. If this is left
+            blank, all applicable resources for this account will be included.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksRequest.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time period for the attacks.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.ListAttacksResponse">
+            <summary>
+            This is the response object from the ListAttacks operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksResponse.AttackSummaries">
+            <summary>
+            Gets and sets the property AttackSummaries. 
+            <para>
+            The attack information for the specified time range.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListAttacksResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token returned by a previous call to indicate that there is more data available.
+            If not null, more results are available. Pass this value for the <code>NextMarker</code>
+            parameter in a subsequent call to <code>ListAttacks</code> to retrieve the next set
+            of items.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.ListProtectionsRequest">
+            <summary>
+            Container for the parameters to the ListProtections operation.
+            Lists all <a>Protection</a> objects for the account.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListProtectionsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of <a>Protection</a> objects to be returned. If this is left blank
+            the first 20 results will be returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListProtectionsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The <code>ListProtectionsRequest.NextToken</code> value from a previous call to <code>ListProtections</code>.
+            Pass null if this is the first call.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.ListProtectionsResponse">
+            <summary>
+            This is the response object from the ListProtections operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListProtectionsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If you specify a value for <code>MaxResults</code> and you have more Protections than
+            the value of MaxResults, AWS Shield Advanced returns a NextToken value in the response
+            that allows you to list another group of Protections. For the second and subsequent
+            ListProtections requests, specify the value of NextToken from the previous response
+            to get information about another batch of Protections.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.ListProtectionsResponse.Protections">
+            <summary>
+            Gets and sets the property Protections. 
+            <para>
+            The array of enabled <a>Protection</a> objects.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.LockedSubscriptionException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.String)">
+            <summary>
+            Constructs a new LockedSubscriptionException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of LockedSubscriptionException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of LockedSubscriptionException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LockedSubscriptionException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LockedSubscriptionException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.LockedSubscriptionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the LockedSubscriptionException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.Mitigation">
+            <summary>
+            The mitigation applied to a DDoS attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Mitigation.MitigationName">
+            <summary>
+            Gets and sets the property MitigationName. 
+            <para>
+            The name of the mitigation taken for this attack.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.OptimisticLockException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.String)">
+            <summary>
+            Constructs a new OptimisticLockException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of OptimisticLockException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of OptimisticLockException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OptimisticLockException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OptimisticLockException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.OptimisticLockException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the OptimisticLockException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.Protection">
+            <summary>
+            An object that represents a resource that is under DDoS protection.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Protection.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The unique identifier (ID) of the protection.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Protection.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The friendly name of the protection. For example, <code>My CloudFront distributions</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Protection.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN (Amazon Resource Name) of the AWS resource that is protected.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.ResourceAlreadyExistsException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceAlreadyExistsException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceAlreadyExistsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceAlreadyExistsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ResourceAlreadyExistsException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.ResourceNotFoundException">
+            <summary>
+             Shield exception
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Shield.Model.ResourceNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructs a new instance of the ResourceNotFoundException class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="info" /> parameter is null. </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult" /> is zero (0). </exception>
+        </member>
+        <member name="T:Amazon.Shield.Model.SubResourceSummary">
+            <summary>
+            The attack information for the specified SubResource.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SubResourceSummary.AttackVectors">
+            <summary>
+            Gets and sets the property AttackVectors. 
+            <para>
+            The list of attack types and associated counters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SubResourceSummary.Counters">
+            <summary>
+            Gets and sets the property Counters. 
+            <para>
+            The counters that describe the details of the attack.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SubResourceSummary.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The unique identifier (ID) of the <code>SubResource</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SubResourceSummary.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            The <code>SubResource</code> type.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.Subscription">
+            <summary>
+            Information about the AWS Shield Advanced subscription for an account.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Subscription.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The start time of the subscription, in the format "2016-12-16T13:50Z".
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.Subscription.TimeCommitmentInSeconds">
+            <summary>
+            Gets and sets the property TimeCommitmentInSeconds. 
+            <para>
+            The length, in seconds, of the AWS Shield Advanced subscription for the account.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.SummarizedAttackVector">
+            <summary>
+            A summary of information about the attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedAttackVector.VectorCounters">
+            <summary>
+            Gets and sets the property VectorCounters. 
+            <para>
+            The list of counters that describe the details of the attack.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedAttackVector.VectorType">
+            <summary>
+            Gets and sets the property VectorType. 
+            <para>
+            The attack type, for example, SNMP reflection or SYN flood.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.SummarizedCounter">
+            <summary>
+            The counter that describes a DDoS attack.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.Average">
+            <summary>
+            Gets and sets the property Average. 
+            <para>
+            The average value of the counter for a specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.Max">
+            <summary>
+            Gets and sets the property Max. 
+            <para>
+            The maximum value of the counter for a specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.N">
+            <summary>
+            Gets and sets the property N. 
+            <para>
+            The number of counters for a specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The counter name.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.Sum">
+            <summary>
+            Gets and sets the property Sum. 
+            <para>
+            The total of counter values for a specified time period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.SummarizedCounter.Unit">
+            <summary>
+            Gets and sets the property Unit. 
+            <para>
+            The unit of the counters.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.TimeRange">
+            <summary>
+            The time range.
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.TimeRange.FromInclusive">
+            <summary>
+            Gets and sets the property FromInclusive. 
+            <para>
+            The start time, in the format 2016-12-16T13:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Shield.Model.TimeRange.ToExclusive">
+            <summary>
+            Gets and sets the property ToExclusive. 
+            <para>
+            The end time, in the format 2016-12-16T15:50Z.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.AttackDetailUnmarshaller">
+            <summary>
+            Response Unmarshaller for AttackDetail Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackDetailUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#AttackDetail,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackDetailUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.AttackDetailUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.AttackSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for AttackSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#AttackSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.AttackSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.AttackVectorDescriptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AttackVectorDescription Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackVectorDescriptionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#AttackVectorDescription,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.AttackVectorDescriptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.AttackVectorDescriptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionRequestMarshaller">
+            <summary>
+            CreateProtection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionRequestMarshaller.Marshall(Amazon.Shield.Model.CreateProtectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateProtection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.CreateProtectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionRequestMarshaller">
+            <summary>
+            CreateSubscription Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionRequestMarshaller.Marshall(Amazon.Shield.Model.CreateSubscriptionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateSubscription operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.CreateSubscriptionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionRequestMarshaller">
+            <summary>
+            DeleteProtection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionRequestMarshaller.Marshall(Amazon.Shield.Model.DeleteProtectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteProtection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteProtectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionRequestMarshaller">
+            <summary>
+            DeleteSubscription Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionRequestMarshaller.Marshall(Amazon.Shield.Model.DeleteSubscriptionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteSubscription operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.DeleteSubscriptionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackRequestMarshaller">
+            <summary>
+            DescribeAttack Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackRequestMarshaller.Marshall(Amazon.Shield.Model.DescribeAttackRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeAttack operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeAttackResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionRequestMarshaller">
+            <summary>
+            DescribeProtection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionRequestMarshaller.Marshall(Amazon.Shield.Model.DescribeProtectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeProtection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeProtectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionRequestMarshaller">
+            <summary>
+            DescribeSubscription Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionRequestMarshaller.Marshall(Amazon.Shield.Model.DescribeSubscriptionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeSubscription operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.DescribeSubscriptionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksRequestMarshaller">
+            <summary>
+            ListAttacks Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksRequestMarshaller.Marshall(Amazon.Shield.Model.ListAttacksRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListAttacks operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.ListAttacksResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsRequestMarshaller">
+            <summary>
+            ListProtections Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsRequestMarshaller.Marshall(Amazon.Shield.Model.ListProtectionsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListProtections operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.ListProtectionsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.MitigationUnmarshaller">
+            <summary>
+            Response Unmarshaller for Mitigation Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.MitigationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#Mitigation,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.MitigationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.MitigationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.ProtectionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Protection Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ProtectionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#Protection,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.ProtectionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.ProtectionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.SubResourceSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for SubResourceSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SubResourceSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#SubResourceSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SubResourceSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.SubResourceSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Subscription Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#Subscription,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedAttackVectorUnmarshaller">
+            <summary>
+            Response Unmarshaller for SummarizedAttackVector Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedAttackVectorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#SummarizedAttackVector,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedAttackVectorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedAttackVectorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedCounterUnmarshaller">
+            <summary>
+            Response Unmarshaller for SummarizedCounter Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedCounterUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Shield#Model#SummarizedCounter,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedCounterUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Shield.Model.Internal.MarshallTransformations.SummarizedCounterUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.Model.Internal.MarshallTransformations.TimeRangeMarshaller">
+            <summary>
+            TimeRange Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Shield.Model.Internal.MarshallTransformations.TimeRangeMarshaller.Marshall(Amazon.Shield.Model.TimeRange,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Shield.Model.Internal.MarshallTransformations.TimeRangeMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Shield.AmazonShieldClient">
+             <summary>
+             Implementation for accessing Shield
+            
+             AWS Shield Advanced 
+             <para>
+             This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers
+             who need detailed information about the AWS Shield Advanced API actions, data types,
+             and errors. For detailed information about AWS WAF and AWS Shield Advanced features
+             and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+             href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield
+             Developer Guide</a>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor">
+             <summary>
+             Constructs AmazonShieldClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonShieldClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(Amazon.Shield.AmazonShieldConfig)">
+             <summary>
+             Constructs AmazonShieldClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonShieldClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Shield.AmazonShieldConfig)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Credentials and an
+            AmazonShieldClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonShieldClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String,Amazon.Shield.AmazonShieldConfig)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonShieldClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonShieldClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.#ctor(System.String,System.String,System.String,Amazon.Shield.AmazonShieldConfig)">
+            <summary>
+            Constructs AmazonShieldClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonShieldClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonShieldClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.CreateProtection(Amazon.Shield.Model.CreateProtectionRequest)">
+            <summary>
+            Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon
+            CloudFront distribution, Elastic Load Balancing load balancer, or an Amazon Route
+            53 hosted zone.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateProtection service method.</param>
+            
+            <returns>The response from the CreateProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidOperationException">
+            Exception that indicates that the operation would not cause any change to occur.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidResourceException">
+            Exception that indicates that the resource is invalid. You might not have access to
+            the resource, or the resource might not exist.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.LimitsExceededException">
+            Exception that indicates that the operation would exceed a limit.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.OptimisticLockException">
+            Exception that indicates that the protection state has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceAlreadyExistsException">
+            Exception indicating the specified resource already exists.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtection">REST API Reference for CreateProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.CreateProtectionAsync(Amazon.Shield.Model.CreateProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtection">REST API Reference for CreateProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.CreateSubscription(Amazon.Shield.Model.CreateSubscriptionRequest)">
+            <summary>
+            Activates AWS Shield Advanced for an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateSubscription service method.</param>
+            
+            <returns>The response from the CreateSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceAlreadyExistsException">
+            Exception indicating the specified resource already exists.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateSubscription">REST API Reference for CreateSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.CreateSubscriptionAsync(Amazon.Shield.Model.CreateSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateSubscription">REST API Reference for CreateSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DeleteProtection(Amazon.Shield.Model.DeleteProtectionRequest)">
+            <summary>
+            Deletes an AWS Shield Advanced <a>Protection</a>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteProtection service method.</param>
+            
+            <returns>The response from the DeleteProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.OptimisticLockException">
+            Exception that indicates that the protection state has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtection">REST API Reference for DeleteProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DeleteProtectionAsync(Amazon.Shield.Model.DeleteProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtection">REST API Reference for DeleteProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DeleteSubscription(Amazon.Shield.Model.DeleteSubscriptionRequest)">
+            <summary>
+            Removes AWS Shield Advanced from an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteSubscription service method.</param>
+            
+            <returns>The response from the DeleteSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.LockedSubscriptionException">
+            Exception that indicates that the subscription has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteSubscription">REST API Reference for DeleteSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DeleteSubscriptionAsync(Amazon.Shield.Model.DeleteSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteSubscription">REST API Reference for DeleteSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeAttack(Amazon.Shield.Model.DescribeAttackRequest)">
+            <summary>
+            Describes the details of a DDoS attack.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAttack service method.</param>
+            
+            <returns>The response from the DescribeAttack service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidParameterException">
+            Exception that indicates that the parameters passed to the API are invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttack">REST API Reference for DescribeAttack Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeAttackAsync(Amazon.Shield.Model.DescribeAttackRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeAttack operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeAttack operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttack">REST API Reference for DescribeAttack Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeProtection(Amazon.Shield.Model.DescribeProtectionRequest)">
+            <summary>
+            Lists the details of a <a>Protection</a> object.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeProtection service method.</param>
+            
+            <returns>The response from the DescribeProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtection">REST API Reference for DescribeProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeProtectionAsync(Amazon.Shield.Model.DescribeProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtection">REST API Reference for DescribeProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeSubscription(Amazon.Shield.Model.DescribeSubscriptionRequest)">
+            <summary>
+            Provides details about the AWS Shield Advanced subscription for an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeSubscription service method.</param>
+            
+            <returns>The response from the DescribeSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeSubscription">REST API Reference for DescribeSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.DescribeSubscriptionAsync(Amazon.Shield.Model.DescribeSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeSubscription">REST API Reference for DescribeSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.ListAttacks(Amazon.Shield.Model.ListAttacksRequest)">
+            <summary>
+            Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListAttacks service method.</param>
+            
+            <returns>The response from the ListAttacks service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidOperationException">
+            Exception that indicates that the operation would not cause any change to occur.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidParameterException">
+            Exception that indicates that the parameters passed to the API are invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListAttacks">REST API Reference for ListAttacks Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.ListAttacksAsync(Amazon.Shield.Model.ListAttacksRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListAttacks operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListAttacks operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListAttacks">REST API Reference for ListAttacks Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.ListProtections(Amazon.Shield.Model.ListProtectionsRequest)">
+            <summary>
+            Lists all <a>Protection</a> objects for the account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListProtections service method.</param>
+            
+            <returns>The response from the ListProtections service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections">REST API Reference for ListProtections Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.AmazonShieldClient.ListProtectionsAsync(Amazon.Shield.Model.ListProtectionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListProtections operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListProtections operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections">REST API Reference for ListProtections Operation</seealso>
+        </member>
+        <member name="T:Amazon.Shield.IAmazonShield">
+             <summary>
+             Interface for accessing Shield
+            
+             AWS Shield Advanced 
+             <para>
+             This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers
+             who need detailed information about the AWS Shield Advanced API actions, data types,
+             and errors. For detailed information about AWS WAF and AWS Shield Advanced features
+             and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
+             href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield
+             Developer Guide</a>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.CreateProtection(Amazon.Shield.Model.CreateProtectionRequest)">
+            <summary>
+            Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon
+            CloudFront distribution, Elastic Load Balancing load balancer, or an Amazon Route
+            53 hosted zone.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateProtection service method.</param>
+            
+            <returns>The response from the CreateProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidOperationException">
+            Exception that indicates that the operation would not cause any change to occur.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidResourceException">
+            Exception that indicates that the resource is invalid. You might not have access to
+            the resource, or the resource might not exist.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.LimitsExceededException">
+            Exception that indicates that the operation would exceed a limit.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.OptimisticLockException">
+            Exception that indicates that the protection state has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceAlreadyExistsException">
+            Exception indicating the specified resource already exists.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtection">REST API Reference for CreateProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.CreateProtectionAsync(Amazon.Shield.Model.CreateProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateProtection">REST API Reference for CreateProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.CreateSubscription(Amazon.Shield.Model.CreateSubscriptionRequest)">
+            <summary>
+            Activates AWS Shield Advanced for an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateSubscription service method.</param>
+            
+            <returns>The response from the CreateSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceAlreadyExistsException">
+            Exception indicating the specified resource already exists.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateSubscription">REST API Reference for CreateSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.CreateSubscriptionAsync(Amazon.Shield.Model.CreateSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the CreateSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the CreateSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/CreateSubscription">REST API Reference for CreateSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DeleteProtection(Amazon.Shield.Model.DeleteProtectionRequest)">
+            <summary>
+            Deletes an AWS Shield Advanced <a>Protection</a>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteProtection service method.</param>
+            
+            <returns>The response from the DeleteProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.OptimisticLockException">
+            Exception that indicates that the protection state has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtection">REST API Reference for DeleteProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DeleteProtectionAsync(Amazon.Shield.Model.DeleteProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteProtection">REST API Reference for DeleteProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DeleteSubscription(Amazon.Shield.Model.DeleteSubscriptionRequest)">
+            <summary>
+            Removes AWS Shield Advanced from an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteSubscription service method.</param>
+            
+            <returns>The response from the DeleteSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.LockedSubscriptionException">
+            Exception that indicates that the subscription has been modified by another client.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteSubscription">REST API Reference for DeleteSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DeleteSubscriptionAsync(Amazon.Shield.Model.DeleteSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DeleteSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DeleteSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DeleteSubscription">REST API Reference for DeleteSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeAttack(Amazon.Shield.Model.DescribeAttackRequest)">
+            <summary>
+            Describes the details of a DDoS attack.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAttack service method.</param>
+            
+            <returns>The response from the DescribeAttack service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidParameterException">
+            Exception that indicates that the parameters passed to the API are invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttack">REST API Reference for DescribeAttack Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeAttackAsync(Amazon.Shield.Model.DescribeAttackRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeAttack operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeAttack operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeAttack">REST API Reference for DescribeAttack Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeProtection(Amazon.Shield.Model.DescribeProtectionRequest)">
+            <summary>
+            Lists the details of a <a>Protection</a> object.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeProtection service method.</param>
+            
+            <returns>The response from the DescribeProtection service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtection">REST API Reference for DescribeProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeProtectionAsync(Amazon.Shield.Model.DescribeProtectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeProtection operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeProtection operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeProtection">REST API Reference for DescribeProtection Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeSubscription(Amazon.Shield.Model.DescribeSubscriptionRequest)">
+            <summary>
+            Provides details about the AWS Shield Advanced subscription for an account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeSubscription service method.</param>
+            
+            <returns>The response from the DescribeSubscription service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeSubscription">REST API Reference for DescribeSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.DescribeSubscriptionAsync(Amazon.Shield.Model.DescribeSubscriptionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the DescribeSubscription operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the DescribeSubscription operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/DescribeSubscription">REST API Reference for DescribeSubscription Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.ListAttacks(Amazon.Shield.Model.ListAttacksRequest)">
+            <summary>
+            Returns all ongoing DDoS attacks or all DDoS attacks during a specified time period.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListAttacks service method.</param>
+            
+            <returns>The response from the ListAttacks service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidOperationException">
+            Exception that indicates that the operation would not cause any change to occur.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.InvalidParameterException">
+            Exception that indicates that the parameters passed to the API are invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListAttacks">REST API Reference for ListAttacks Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.ListAttacksAsync(Amazon.Shield.Model.ListAttacksRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListAttacks operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListAttacks operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListAttacks">REST API Reference for ListAttacks Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.ListProtections(Amazon.Shield.Model.ListProtectionsRequest)">
+            <summary>
+            Lists all <a>Protection</a> objects for the account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListProtections service method.</param>
+            
+            <returns>The response from the ListProtections service method, as returned by Shield.</returns>
+            <exception cref="T:Amazon.Shield.Model.InternalErrorException">
+            Exception that indicates that a problem occurred with the service infrastructure.
+            You can retry the request.
+            </exception>
+            <exception cref="T:Amazon.Shield.Model.ResourceNotFoundException">
+            Exception indicating the specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections">REST API Reference for ListProtections Operation</seealso>
+        </member>
+        <member name="M:Amazon.Shield.IAmazonShield.ListProtectionsAsync(Amazon.Shield.Model.ListProtectionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates the asynchronous execution of the ListProtections operation.
+            </summary>
+            
+            <param name="request">Container for the necessary parameters to execute the ListProtections operation.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            <returns>The task object representing the asynchronous operation.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/shield-2016-06-02/ListProtections">REST API Reference for ListProtections Operation</seealso>
+        </member>
+    </members>
+</doc>
