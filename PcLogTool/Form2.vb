@@ -15,6 +15,8 @@ Public Class User_Register_Form
     '企業名設定インスタンスを作成する
     Dim CompanyDao As New CompanyDao()
 
+    Dim companyNameBoxManage As New CompanyNameBox()
+
     Private Sub User_Register_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'PC名をデフォルトで入力させておく
         Label4.Text = userspc
@@ -23,26 +25,42 @@ Public Class User_Register_Form
 
     End Sub
 
-    '企業名コンボボックスに初期値を入れておく
+    '企業名コンボボックスに初期値を入れておく処理
     Function companyNameBoxDefaultValue()
         Dim Con As New MySqlConnection
         Dim result As String
         Dim resultArray As New ArrayList
+        Dim dr As MySqlDataReader
         Con.ConnectionString = mysqlManage.Connect()
 
         Try
             Console.WriteLine("companyNameBoxDefaultValue start")
-            Dim item As CompanyNameBox
+
+            Con.ConnectionString = mysqlManage.Connect()
+
+            Dim cmd As MySqlCommand
+
+            Dim sqlStr As String
+
+            '接続 
+            Con.Open()
+            'SQL文 
+            sqlStr = "SELECT id,company_name FROM company"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, Con)
 
             'SQL文実行 
-            resultArray = CompanyDao.getCompanyInfo
+            dr = cmd.ExecuteReader
 
-            '結果を表示 
-            For Each value As String In resultArray
-                Console.WriteLine(value)
-                item = New CompanyNameBox(value)
-                companyNameBox.Items.Add(value)
-            Next
+            While dr.Read()
+                Dim id As String = CStr(dr("id"))
+                Dim companyName As String = dr("company_name")
+                Console.WriteLine(id, CompanyName)
+                companyNameBoxManage.setComapanyId(id, companyName)
+                companyNameBox.Items.Add(CompanyName)
+            End While
+
             result = True
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
@@ -54,8 +72,6 @@ Public Class User_Register_Form
         Return result
     End Function
 
-
-
     Private Sub register_submit_buttom_Click(sender As Object, e As EventArgs) Handles register_submit_buttom.Click
 
         Dim companyName As String
@@ -64,7 +80,7 @@ Public Class User_Register_Form
         'フォームで選択された企業名
         companyName = companyNameBox.SelectedItem
         'フォームで選択された企業名から企業ＩＤを取得
-        companyId = CompanyDao.getCompanyId(companyName)
+        companyId = companyNameBoxManage.getComapanyIdByName(companyName)
         Console.WriteLine("companyId:" & companyId)
         'ユーザー名と企業ＩＤをmysqlに保存
         insertUser(companyId)
@@ -101,7 +117,7 @@ Public Class User_Register_Form
 
         End Try
 
-
+        Return True
 
     End Function
 
@@ -130,6 +146,5 @@ Public Class User_Register_Form
     End Sub
 
     Private Sub companyNameBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles companyNameBox.SelectedIndexChanged
-
     End Sub
 End Class

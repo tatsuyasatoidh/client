@@ -1,23 +1,16 @@
 ﻿Friend Class CompanyNameBox
-    Private companyname As String = ""
+    Private companyname As Hashtable = New Hashtable
 
     'コンストラクタ
-    Public Sub New(ByVal name As String)
-        companyname = name
+    Public Sub New()
+
     End Sub
 
-    '表示名称
-    '（このプロパティはこのサンプルでは使わないのでなくても良い）
-    Public ReadOnly Property Name() As String
-        Get
-            Return companyname
-        End Get
-    End Property
+    Public Sub setComapanyId(ByVal id As String, ByVal campanyName As String)
+        companyname(campanyName) = id
+    End Sub
 
-    'オーバーライドしたメソッド
-    'これがコンボボックスに表示される
-    Public Overrides Function ToString() As String
-        Return companyname
+    Public Function getComapanyIdByName(ByVal campanyName As String)
+        Return companyname(campanyName)
     End Function
-
 End Class

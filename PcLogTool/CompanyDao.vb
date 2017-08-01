@@ -14,7 +14,8 @@ Friend Class CompanyDao
     Public Function getCompanyInfo()
         Dim Con As New MySqlConnection
         Dim dr As MySqlDataReader
-        Dim resultArray As New ArrayList
+        Dim resultArray As Hashtable = New Hashtable
+
         Try
             Con.ConnectionString = MysqlManage.Connect()
 
@@ -25,20 +26,21 @@ Friend Class CompanyDao
             '接続 
             Con.Open()
             'SQL文 
-            sqlStr = "SELECT company_name FROM company"
+            sqlStr = "SELECT id,company_name FROM company"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, Con)
+
+
             'SQL文実行 
             dr = cmd.ExecuteReader
 
-            '結果を表示 
-            While dr.Read()
-                resultArray.Add(CStr(dr("company_name")))
-            End While
+            Return dr
+
         Catch ex As Exception
             MsgBox("getComapnyNameでエラー")
         Finally
+            
             'クローズ 
             Con.Close()
         End Try
@@ -49,7 +51,9 @@ Friend Class CompanyDao
 
     '企業名を使って企業ＩＤを取得'
     Function getCompanyId(ByVal companyName As String)
+
         Console.WriteLine("getCompanyId start")
+
         Dim Con As New MySqlConnection
         Dim result As String
         Dim resultArray As New ArrayList
@@ -66,22 +70,27 @@ Friend Class CompanyDao
             '接続 
             Con.Open()
             'SQL文 
-            sqlStr = "SELECT id FROM company" & " WHERE company.company_name = companyName"
+            sqlStr = "SELECT id FROM company WHERE company_name = `株式会社Ａ`"
             Console.WriteLine(sqlStr)
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, Con)
-
             'SQL文実行 
             dr = cmd.ExecuteReader
+
+
+            If dr.Read() = False Then
+                MsgBox("sql文の結果がfalseです")
+            End If
+
             '結果を表示 
             While dr.Read()
                 result = dr.Item(0)
             End While
             Console.WriteLine(result)
         Catch ex As Exception
+            Console.WriteLine("企業ＩＤの取得に失敗しました")
             Console.WriteLine(ex)
             Console.WriteLine(ex.ToString)
-            Console.WriteLine("企業ＩＤの取得に失敗しました")
             result = False
         Finally
             Con.Close()
