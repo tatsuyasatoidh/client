@@ -3,6 +3,7 @@ Imports MySql.Data.MySqlClient
 
 'mysql接続関数
 Friend Class MysqlManage
+
     Public Function Connect()
 
         '現在の日付を取得する

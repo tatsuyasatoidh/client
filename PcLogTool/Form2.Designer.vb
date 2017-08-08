@@ -27,16 +27,16 @@ Partial Class User_Register_Form
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.box_username = New System.Windows.Forms.TextBox()
         Me.companyNameBox = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'register_submit_buttom
         '
         Me.register_submit_buttom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.register_submit_buttom.Location = New System.Drawing.Point(104, 254)
+        Me.register_submit_buttom.Location = New System.Drawing.Point(83, 161)
         Me.register_submit_buttom.Name = "register_submit_buttom"
-        Me.register_submit_buttom.Size = New System.Drawing.Size(100, 23)
+        Me.register_submit_buttom.Size = New System.Drawing.Size(142, 23)
         Me.register_submit_buttom.TabIndex = 4
         Me.register_submit_buttom.Text = "ユーザー情報登録"
         Me.register_submit_buttom.UseVisualStyleBackColor = True
@@ -82,13 +82,6 @@ Partial Class User_Register_Form
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Label4"
         '
-        'box_username
-        '
-        Me.box_username.Location = New System.Drawing.Point(104, 37)
-        Me.box_username.Name = "box_username"
-        Me.box_username.Size = New System.Drawing.Size(100, 19)
-        Me.box_username.TabIndex = 9
-        '
         'companyNameBox
         '
         Me.companyNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -98,13 +91,23 @@ Partial Class User_Register_Form
         Me.companyNameBox.Size = New System.Drawing.Size(121, 20)
         Me.companyNameBox.TabIndex = 11
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(102, 44)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(38, 12)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Label3"
+        '
         'User_Register_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 326)
+        Me.ClientSize = New System.Drawing.Size(284, 212)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.companyNameBox)
-        Me.Controls.Add(Me.box_username)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -112,7 +115,7 @@ Partial Class User_Register_Form
         Me.Controls.Add(Me.Label4)
         Me.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Name = "User_Register_Form"
-        Me.Text = "Form2"
+        Me.Text = "ユーザー情報登録"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -122,6 +125,6 @@ Partial Class User_Register_Form
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents box_username As TextBox
     Friend WithEvents companyNameBox As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

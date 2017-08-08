@@ -18,6 +18,8 @@ Public Class User_Register_Form
     Dim companyNameBoxManage As New CompanyNameBox()
 
     Private Sub User_Register_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'user名をデフォルトで入力させておく
+        Label3.Text = username
         'PC名をデフォルトで入力させておく
         Label4.Text = userspc
         '企業名コンボボックスに初期値を入れておく
@@ -73,21 +75,28 @@ Public Class User_Register_Form
     End Function
 
     Private Sub register_submit_buttom_Click(sender As Object, e As EventArgs) Handles register_submit_buttom.Click
+        Try
+            Dim companyName As String
+            Dim companyId As Integer
+            MsgBox("ユーザー情報を登録します。")
+            'フォームで選択された企業名
+            companyName = companyNameBox.SelectedItem
+            'フォームで選択された企業名から企業ＩＤを取得
+            companyId = companyNameBoxManage.getComapanyIdByName(companyName)
+            Console.WriteLine("companyId:" & companyId)
+            'ユーザー名と企業ＩＤをmysqlに保存
+            insertUser(companyId)
+            Dim form As New Form1()
+            Dim form2 As New User_Register_Form()
 
-        Dim companyName As String
-        Dim companyId As Integer
+            form2.Close()
+            MsgBox("ユーザー情報を登録しました")
+            form.ShowDialog(Me)
+        Catch ex As Exception
+            MsgBox("ユーザー情報に失敗しました")
+        Finally
 
-        'フォームで選択された企業名
-        companyName = companyNameBox.SelectedItem
-        'フォームで選択された企業名から企業ＩＤを取得
-        companyId = companyNameBoxManage.getComapanyIdByName(companyName)
-        Console.WriteLine("companyId:" & companyId)
-        'ユーザー名と企業ＩＤをmysqlに保存
-        insertUser(companyId)
-
-        Dim form As New Form1()
-        form.ShowDialog(Me)
-
+        End Try
     End Sub
 
     Function insertUser(companyId)
@@ -100,7 +109,7 @@ Public Class User_Register_Form
             Dim myInsertQuery As String = "INSERT INTO `user`(`user_name`, `machine_name`,`company_id`) VALUES(?val5,?val6,?val7)"
             Dim myCommand As New MySqlCommand(myInsertQuery, Con)
             'pclog_id
-            myCommand.Parameters.AddWithValue("?val5", box_username.Text)
+            myCommand.Parameters.AddWithValue("?val5", Label3.Text)
             '
             myCommand.Parameters.AddWithValue("?val6", Label4.Text)
             '企業ＩＤを格納
@@ -141,10 +150,14 @@ Public Class User_Register_Form
         Return True
     End Function
 
-    Private Sub box_username_TextChanged(sender As Object, e As EventArgs) Handles box_username.TextChanged
+    Private Sub box_username_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub companyNameBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles companyNameBox.SelectedIndexChanged
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
     End Sub
 End Class

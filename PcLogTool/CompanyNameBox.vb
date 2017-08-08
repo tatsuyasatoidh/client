@@ -1,5 +1,10 @@
-﻿Friend Class CompanyNameBox
+﻿'mysqlを使う
+Imports MySql.Data.MySqlClient
+
+Friend Class CompanyNameBox
     Private companyname As Hashtable = New Hashtable
+    Dim CompanyDao As New CompanyDao()
+    Dim MysqlManage As New MysqlManage()
 
     'コンストラクタ
     Public Sub New()

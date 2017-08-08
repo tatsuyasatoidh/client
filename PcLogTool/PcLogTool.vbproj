@@ -384,6 +384,11 @@
     <Compile Include="..\..\..\..\..\Desktop\test.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AmazonS3Manage.vb" />
+    <Compile Include="Hook\MonseHook.vb" />
+    <Compile Include="PcLogDao.vb" />
+    <Compile Include="UserDao.vb" />
+    <Compile Include="User.vb" />
     <Compile Include="CompanyDao.vb" />
     <Compile Include="CompanyNameBox.vb" />
     <Compile Include="Form2.Designer.vb">
