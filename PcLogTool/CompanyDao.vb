@@ -3,21 +3,24 @@ Imports MySql.Data.MySqlClient
 
 Friend Class CompanyDao
 
-    Dim Con As New MySqlConnection
+    '    Dim Con As New MySqlConnection
+    Dim Con As MySqlConnection
     Dim result As String
     Dim resultArray As New ArrayList
     Dim dr As MySqlDataReader
 
-    Private MysqlManage
+    '    Private MysqlManage
 
-    Public Sub New()
-        Dim Mysqlinstance As New MysqlManage()
-        MysqlManage = Mysqlinstance
+    Public Sub New(oCon)
+        '        Dim Mysqlinstance As New MysqlManage()
+        '       MysqlManage = Mysqlinstance
+        Con = oCon
+        Con.ConnectionString = MysqlManage.Connect()
     End Sub
 
     Public Function getAll()
 
-        Con.ConnectionString = MysqlManage.Connect()
+        '        Con.ConnectionString = MysqlManage.Connect()
 
         Dim cmd As MySqlCommand
 
@@ -40,12 +43,12 @@ Friend Class CompanyDao
 
     '企業名取得関数
     Public Function getCompanyInfo()
-        Dim Con As New MySqlConnection
+        '        Dim Con As New MySqlConnection
         Dim dr As MySqlDataReader
         Dim resultArray As Hashtable = New Hashtable
 
         Try
-            Con.ConnectionString = MysqlManage.Connect()
+            '           Con.ConnectionString = MysqlManage.Connect()
 
             Dim cmd As MySqlCommand
 

@@ -4,11 +4,14 @@ Imports MySql.Data.MySqlClient
 Friend Class PcLogDao
 
     'Mysql設定インスタンスを作成する
-    Dim mysqlManage As New MysqlManage()
+    '    Dim mysqlManage As New MysqlManage()
+    Dim Con As MySqlConnection
     'Userのインスタンス
     Dim UserManage As New User()
 
-    Public Sub New()
+    Public Sub New(oCon)
+        Con = oCon
+        Con.ConnectionString = MysqlManage.Connect()
     End Sub
 
     '作業量を取得
@@ -18,8 +21,8 @@ Friend Class PcLogDao
 
         Dim result As Integer
 
-        Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        '        Dim Con As New MySqlConnection
+        '        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する
@@ -51,8 +54,8 @@ Friend Class PcLogDao
         Dim userId As Integer = UserManage.getId()
 
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
-        Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        '        Dim Con As New MySqlConnection
+        '        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する
@@ -82,8 +85,8 @@ Friend Class PcLogDao
         Dim userId As Integer = UserManage.getId()
 
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
-        Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        '        Dim Con As New MySqlConnection
+        '        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する

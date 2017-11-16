@@ -2,6 +2,8 @@
 Imports MySql.Data.MySqlClient
 
 Public Class User_Register_Form
+    Dim Con As New MySqlConnection
+
     'ログインユーザ名取得
     Dim username As String = System.Environment.UserName
     'マシン名取得
@@ -10,14 +12,15 @@ Public Class User_Register_Form
     Dim dtToday As DateTime = DateTime.Today
 
     'Mysql設定インスタンスを作成する
-    Dim mysqlManage As New MysqlManage()
+    '    Dim mysqlManage As New MysqlManage()
 
     '企業名設定インスタンスを作成する
-    Dim CompanyDao As New CompanyDao()
+    Dim CompanyDao As New CompanyDao(Con)
 
     Dim companyNameBoxManage As New CompanyNameBox()
 
     Private Sub User_Register_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Con.ConnectionString = MysqlManage.Connect()
         'user名をデフォルトで入力させておく
         Label3.Text = username
         'PC名をデフォルトで入力させておく
@@ -29,16 +32,15 @@ Public Class User_Register_Form
 
     '企業名コンボボックスに初期値を入れておく処理
     Function companyNameBoxDefaultValue()
-        Dim Con As New MySqlConnection
+        '        Dim Con As New MySqlConnection
         Dim result As String
         Dim resultArray As New ArrayList
         Dim dr As MySqlDataReader
-        Con.ConnectionString = mysqlManage.Connect()
 
         Try
             Console.WriteLine("companyNameBoxDefaultValue start")
 
-            Con.ConnectionString = mysqlManage.Connect()
+            '            Con.ConnectionString = MysqlManage.Connect()
 
             Dim cmd As MySqlCommand
 
@@ -55,10 +57,13 @@ Public Class User_Register_Form
             'SQL文実行 
             dr = cmd.ExecuteReader
 
+            Dim id As String
+            Dim companyName As String
+
             While dr.Read()
-                Dim id As String = CStr(dr("id"))
-                Dim companyName As String = dr("company_name")
-                Console.WriteLine(id, CompanyName)
+                id = CStr(dr("id"))
+                companyName = dr("company_name")
+                Console.WriteLine(id, companyName)
                 companyNameBoxManage.setComapanyId(id, companyName)
                 companyNameBox.Items.Add(CompanyName)
             End While
@@ -101,9 +106,9 @@ Public Class User_Register_Form
 
     Function insertUser(companyId)
         Console.WriteLine("insertUser")
-        Dim Con As New MySqlConnection
+        '       Dim Con As New MySqlConnection
         Try
-            Con.ConnectionString = mysqlManage.Connect()
+            '            Con.ConnectionString = MysqlManage.Connect()
             Con.Open()
             'pclog_idを使ってファイルを格納
             Dim myInsertQuery As String = "INSERT INTO `user`(`user_name`, `machine_name`,`company_id`) VALUES(?val5,?val6,?val7)"
@@ -133,8 +138,8 @@ Public Class User_Register_Form
 
 
     Function InsertCompany()
-        Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        '        Dim Con As New MySqlConnection
+        '        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
         'pclog_idを使ってファイルを格納
         Dim myInsertQuery As String = "INSERT INTO `company`(`company_name`) VALUES(?val1)"

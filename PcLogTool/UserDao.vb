@@ -4,13 +4,13 @@ Imports MySql.Data.MySqlClient
 Public Class UserDao
 
     'Mysql設定インスタンスを作成する
-    Dim mysqlManage As New MysqlManage()
+    '    Dim mysqlManage As New MysqlManage()
 
     Public Function getAll(MachineUserName, MachineName)
         Dim Info As Hashtable = New Hashtable
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
         Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する
@@ -40,7 +40,7 @@ Public Class UserDao
         Dim Con As New MySqlConnection
         Dim machineName As String
         Try
-            Con.ConnectionString = mysqlManage.Connect()
+            Con.ConnectionString = MysqlManage.Connect()
             Con.Open()
 
             machineName = System.Environment.MachineName
@@ -77,7 +77,7 @@ Public Class UserDao
         Dim result As Boolean
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
         Dim Con As New MySqlConnection
-        Con.ConnectionString = mysqlManage.Connect()
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する

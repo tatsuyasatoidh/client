@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 'mysql接続関数
 Friend Class MysqlManage
 
-    Public Function Connect()
+    Public Shared Function Connect()
 
         '現在の日付を取得する
         Dim dtToday As DateTime = DateTime.Today
