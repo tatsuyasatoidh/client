@@ -378,13 +378,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\Desktop\test.Designer.vb">
-      <DependentUpon>test.vb</DependentUpon>
+    <Compile Include="AmazonS3Manage.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="..\..\..\..\..\Desktop\test.vb">
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AmazonS3Manage.vb" />
     <Compile Include="Hook\MonseHook.vb" />
     <Compile Include="PcLogDao.vb" />
     <Compile Include="UserDao.vb" />
@@ -415,8 +415,8 @@
     <Compile Include="MysqlManage.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\..\..\..\Desktop\test.resx">
-      <DependentUpon>test.vb</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>

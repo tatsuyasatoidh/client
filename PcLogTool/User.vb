@@ -11,42 +11,43 @@ Public Class User
 
     'コンストラクタ
     Public Sub New()
-        setProperty()
+        SetProperty()
     End Sub
 
     'MysqlUserテーブルから対応のユーザー情報取得
-    Private Sub setProperty()
-        MsgBox("setProperty")
+    Private Sub SetProperty()
         Dim Info As Hashtable = New Hashtable
 
         'ログインユーザ名取得
         MachineUserName = System.Environment.UserName
         'マシン名取得
         MachineName = System.Environment.MachineName
-
-        Info = UserDao.getAll(MachineUserName, MachineName)
-
-        Me.Id = Info("id")
-        Me.CompanyId = Info("company_id")
+        'ユーザーがデータベースに登録されているかを確認
+        If UserDao.chkRecord(MachineUserName, MachineName) Then
+            'ユーザーがデータベースに登録されている場合はクラス変数に値をセット
+            Info = UserDao.GetAll(MachineUserName, MachineName)
+            Me.Id = Info("id")
+            Me.CompanyId = Info("company_id")
+        End If
     End Sub
 
     '操作ユーザー名を返す
-    Public Function getUserName()
+    Public Function GetUserName()
         Return Me.UserName
     End Function
 
     '端末情報を返す
-    Public Function getMachineName()
+    Public Function GetMachineName()
         Return Me.MachineName
     End Function
 
     'ユーザーＩＤを返す
-    Public Function getId()
+    Public Function GetId()
         Return Me.Id
     End Function
 
     'ユーザーＩＤを返す
-    Public Function getCompanyId()
+    Public Function GetCompanyId()
         Return Me.CompanyId
     End Function
 

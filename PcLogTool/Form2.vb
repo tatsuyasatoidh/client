@@ -26,12 +26,12 @@ Public Class User_Register_Form
         'PC名をデフォルトで入力させておく
         Label4.Text = userspc
         '企業名コンボボックスに初期値を入れておく
-        companyNameBoxDefaultValue()
+        CompanyNameBoxDefaultValue()
 
     End Sub
 
     '企業名コンボボックスに初期値を入れておく処理
-    Function companyNameBoxDefaultValue()
+    Function CompanyNameBoxDefaultValue()
         '        Dim Con As New MySqlConnection
         Dim result As String
         Dim resultArray As New ArrayList
@@ -65,7 +65,7 @@ Public Class User_Register_Form
                 companyName = dr("company_name")
                 Console.WriteLine(id, companyName)
                 companyNameBoxManage.setComapanyId(id, companyName)
-                companyNameBox.Items.Add(CompanyName)
+                companyNameBox.Items.Add(companyName)
             End While
 
             result = True
@@ -90,7 +90,7 @@ Public Class User_Register_Form
             companyId = companyNameBoxManage.getComapanyIdByName(companyName)
             Console.WriteLine("companyId:" & companyId)
             'ユーザー名と企業ＩＤをmysqlに保存
-            insertUser(companyId)
+            InsertUser(companyId)
             Dim form As New Form1()
             Dim form2 As New User_Register_Form()
 
@@ -104,15 +104,18 @@ Public Class User_Register_Form
         End Try
     End Sub
 
-    Function insertUser(companyId)
-        Console.WriteLine("insertUser")
-        '       Dim Con As New MySqlConnection
+    Function InsertUser(companyId)
+
         Try
-            '            Con.ConnectionString = MysqlManage.Connect()
+            Console.WriteLine("InsertUser START")
+            Console.WriteLine(companyId)
+            Dim Con As New MySqlConnection
+            Con.ConnectionString = MysqlManage.Connect()
             Con.Open()
             'pclog_idを使ってファイルを格納
             Dim myInsertQuery As String = "INSERT INTO `user`(`user_name`, `machine_name`,`company_id`) VALUES(?val5,?val6,?val7)"
             Dim myCommand As New MySqlCommand(myInsertQuery, Con)
+            Console.WriteLine(myInsertQuery)
             'pclog_id
             myCommand.Parameters.AddWithValue("?val5", Label3.Text)
             '
@@ -123,9 +126,10 @@ Public Class User_Register_Form
             Return myCommand.ExecuteNonQuery()
 
         Catch ex As Exception
+            Console.WriteLine("FAILED TO InsertUser")
             Console.WriteLine(ex)
         Finally
-            Console.WriteLine("insertUser end")
+            Console.WriteLine("InsertUser end")
             Con.Close()
             'SQLを実行します
 
@@ -138,8 +142,8 @@ Public Class User_Register_Form
 
 
     Function InsertCompany()
-        '        Dim Con As New MySqlConnection
-        '        Con.ConnectionString = MysqlManage.Connect()
+        Dim Con As New MySqlConnection
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
         'pclog_idを使ってファイルを格納
         Dim myInsertQuery As String = "INSERT INTO `company`(`company_name`) VALUES(?val1)"

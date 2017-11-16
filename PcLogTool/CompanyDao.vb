@@ -12,13 +12,13 @@ Friend Class CompanyDao
     '    Private MysqlManage
 
     Public Sub New(oCon)
-        '        Dim Mysqlinstance As New MysqlManage()
-        '       MysqlManage = Mysqlinstance
-        Con = oCon
+        Dim Con As New MySqlConnection
+        Con.ConnectionString = MysqlManage.Connect()
+        Con.Open()
         Con.ConnectionString = MysqlManage.Connect()
     End Sub
 
-    Public Function getAll()
+    Public Function GetAll()
 
         '        Con.ConnectionString = MysqlManage.Connect()
 
@@ -55,6 +55,8 @@ Friend Class CompanyDao
             Dim sqlStr As String
 
             '接続 
+            Dim Con As New MySqlConnection
+            Con.ConnectionString = MysqlManage.Connect()
             Con.Open()
             'SQL文 
             sqlStr = "SELECT id,company_name FROM company"

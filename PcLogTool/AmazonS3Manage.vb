@@ -18,7 +18,4 @@ Friend Class AmazonS3Manage
         'リクエストをパラメータに指定してPutObjectメソッドを実行
         objS3PutResponse = objS3Client.PutObject(objS3PutRequest)
     End Sub
-
-
-
 End Class

@@ -4,15 +4,9 @@ Imports MySql.Data.MySqlClient
 Friend Class PcLogDao
 
     'Mysql設定インスタンスを作成する
-    '    Dim mysqlManage As New MysqlManage()
-    Dim Con As MySqlConnection
+    Dim mysqlManage As New MysqlManage()
     'Userのインスタンス
     Dim UserManage As New User()
-
-    Public Sub New(oCon)
-        Con = oCon
-        Con.ConnectionString = MysqlManage.Connect()
-    End Sub
 
     '作業量を取得
     '@param ユーザーＩＤ　今日の日付
@@ -23,6 +17,8 @@ Friend Class PcLogDao
 
         '        Dim Con As New MySqlConnection
         '        Con.ConnectionString = MysqlManage.Connect()
+        Dim Con As New MySqlConnection
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する
@@ -51,11 +47,13 @@ Friend Class PcLogDao
     Public Sub Insertlog(ByVal work As Integer)
         '現在の日付を取得する
         Dim dtToday As DateTime = DateTime.Today
-        Dim userId As Integer = UserManage.getId()
+        Dim userId As Integer = UserManage.GetId()
 
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
         '        Dim Con As New MySqlConnection
         '        Con.ConnectionString = MysqlManage.Connect()
+        Dim Con As New MySqlConnection
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する
@@ -82,11 +80,13 @@ Friend Class PcLogDao
     Public Sub Updatelog(ByVal work As Integer)
         '現在の日付を取得する
         Dim dtToday As DateTime = DateTime.Today
-        Dim userId As Integer = UserManage.getId()
+        Dim userId As Integer = UserManage.GetId()
 
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
         '        Dim Con As New MySqlConnection
         '        Con.ConnectionString = MysqlManage.Connect()
+        Dim Con As New MySqlConnection
+        Con.ConnectionString = MysqlManage.Connect()
         Con.Open()
 
         ' 3.発行するSQL文を作成する

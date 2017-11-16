@@ -6,7 +6,7 @@ Public Class UserDao
     'Mysql設定インスタンスを作成する
     '    Dim mysqlManage As New MysqlManage()
 
-    Public Function getAll(MachineUserName, MachineName)
+    Public Function GetAll(MachineUserName, MachineName)
         Dim Info As Hashtable = New Hashtable
         ' 2.データベースに接続するためのコネクションを準備して、実際につなぐ
         Dim Con As New MySqlConnection
@@ -28,15 +28,15 @@ Public Class UserDao
             Info("company_id") = Ds.Tables(0).Rows(0)("company_id")
             Return Info
         Else
-            Return False
+            Return ""
         End If
         ' 6.データベースの切断
         Con.Close()
     End Function
 
     'Userテーブルにデータを格納する'
-    Function insertUser(companyId, username)
-        Console.WriteLine("insertUser")
+    Function InsertUser(companyId, username)
+        Console.WriteLine("InsertUser")
         Dim Con As New MySqlConnection
         Dim machineName As String
         Try
@@ -60,7 +60,7 @@ Public Class UserDao
         Catch ex As Exception
             Console.WriteLine(ex)
         Finally
-            Console.WriteLine("insertUser end")
+            Console.WriteLine("InsertUser end")
             Con.Close()
             'SQLを実行します
         End Try
@@ -82,7 +82,7 @@ Public Class UserDao
 
         ' 3.発行するSQL文を作成する
         Dim SqlStr As String
-        SqlStr = "SELECT * FROM user WHERE machine_name='" + MachineName + "'　AND user_name ='" + MachineUserName + "'"
+        SqlStr = "SELECT * FROM user WHERE machine_name='" + MachineName + "' AND user_name ='" + MachineUserName + "'"
         Console.WriteLine(SqlStr)
         ' 4.データ取得のためのアダプタの設定
         Dim Adapter = New MySqlDataAdapter(SqlStr, Con)
